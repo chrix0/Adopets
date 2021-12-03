@@ -14,26 +14,34 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.fragmentContainerView)
         navBottom.setupWithNavController(navController)
-        /*
-        navBottom.setOnItemSelectedListener {
+
+        navController.navigate(R.id.adopt_Main_Frag)
+        titleText.setText("Adopt")
+
+        navBottom.setOnItemSelectedListener() {
             when(it.itemId){
                 R.id.adopt_Main_Frag -> {
+                    navController.navigate(R.id.adopt_Main_Frag)
                     titleText.setText("Adopt")
                     true
                 }
                 R.id.breed_Main_Frag -> {
+                    navController.navigate(R.id.breed_Main_Frag)
                     titleText.setText("Breeding")
                     true
                 }
                 R.id.profile_Main_Frag -> {
+                    navController.navigate(R.id.profile_Main_Frag)
                     titleText.setText("Profile")
                     true
                 }
                 R.id.shop_Main_Frag -> {
+                    navController.navigate(R.id.shop_Main_Frag)
                     titleText.setText("Shop")
                     true
                 }
                 R.id.wiki_Main_Frag -> {
+                    navController.navigate(R.id.wiki_Main_Frag)
                     titleText.setText("Wiki")
                     true
                 }
@@ -41,6 +49,5 @@ class MainActivity : AppCompatActivity() {
                     false
             }
         }
-        */
     }
 }
