@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/all_curved_corner.xml" value="0.19583333333333333" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.10625" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank.xml" value="0.240625" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank1.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank2.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank3.xml" value="0.4025670945157526" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adopt_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/ic_placehold"
+        android:title="Adopt"/>
+    <item
+        android:id="@+id/shop_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/ic_placehold"
+        android:title="Shop"/>
+    <item
+        android:id="@+id/wiki_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/ic_placehold"
+        android:title="Wiki"/>
+    <item
+        android:id="@+id/breed_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/ic_placehold"
+        android:title="Breed"/>
+    <item
+        android:id="@+id/profile_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/ic_placehold"
+        android:title="Profile"/>
+</menu>

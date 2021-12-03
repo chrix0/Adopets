@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/adopt_Main_Frag">
+    <fragment
+        android:id="@+id/adopt_Main_Frag"
+        android:name="com.rain.adopets.Adopt_Main_Frag"
+        android:label="fragment_adopt__main_"
+        tools:layout="@layout/fragment_adopt__main_" />
+    <fragment
+        android:id="@+id/breed_Main_Frag"
+        android:name="com.rain.adopets.Breed_Main_Frag"
+        android:label="fragment_breed__main_"
+        tools:layout="@layout/fragment_breed__main_" />
+    <fragment
+        android:id="@+id/profile_Main_Frag"
+        android:name="com.rain.adopets.Profile_Main_Frag"
+        android:label="fragment_profile__main_"
+        tools:layout="@layout/fragment_profile__main_" />
+    <fragment
+        android:id="@+id/shop_Main_Frag"
+        android:name="com.rain.adopets.Shop_Main_Frag"
+        android:label="fragment_shop__main_"
+        tools:layout="@layout/fragment_shop__main_" />
+    <fragment
+        android:id="@+id/wiki_Main_Frag"
+        android:name="com.rain.adopets.Wiki_Main_Frag"
+        android:label="fragment_wiki__main_"
+        tools:layout="@layout/fragment_wiki__main_" />
+</navigation>
