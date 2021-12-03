@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/all_curved_corner.xml" value="0.19583333333333333" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.10625" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/font/.xml" value="0.11041666666666666" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.2875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank.xml" value="0.240625" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank1.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank2.xml" value="0.1" />
@@ -16,6 +17,7 @@
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/xml/root_preferences.xml" value="0.14666666666666667" />
       </map>
     </option>
   </component>
