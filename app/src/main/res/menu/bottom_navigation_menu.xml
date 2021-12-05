@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/adopt_Main_Frag"
+        android:enabled="true"
+        android:icon="@drawable/navbar_adopt"
+        android:title="Adopt"/>
+    <item
         android:id="@+id/shop_Main_Frag"
         android:enabled="true"
         android:icon="@drawable/navbar_shop"
@@ -10,11 +15,6 @@
         android:enabled="true"
         android:icon="@drawable/navbar_wiki"
         android:title="Wiki"/>
-    <item
-        android:id="@+id/adopt_Main_Frag"
-        android:enabled="true"
-        android:icon="@drawable/navbar_adopt"
-        android:title="Adopt"/>
     <item
         android:id="@+id/breed_Main_Frag"
         android:enabled="true"

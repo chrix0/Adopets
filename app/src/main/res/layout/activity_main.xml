@@ -6,15 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:paddingTop="10dp"
-    android:weightSum="16">
+    android:weightSum="16"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar">
 
     <LinearLayout
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
-        android:background="@drawable/all_curved_corner"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="20dp"
@@ -46,11 +45,14 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBottom"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
         android:layout_weight="1.5"
-        android:background="@color/white"
+        android:background="@color/sandyBrown"
+        app:itemIconTint="@color/darkerBrown"
+        app:itemTextColor="@color/black"
         app:menu="@menu/bottom_navigation_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
