@@ -16,33 +16,33 @@ class MainActivity : AppCompatActivity() {
         navBottom.setupWithNavController(navController)
 
         navController.navigate(R.id.adopt_Main_Frag)
-        titleText.setText("Adopt")
+        titleText.text = "Adopt"
 
-        navBottom.setOnItemSelectedListener() {
+        navBottom.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.adopt_Main_Frag -> {
                     navController.navigate(R.id.adopt_Main_Frag)
-                    titleText.setText("Adopt")
+                    titleText.text = "Adopt"
                     true
                 }
                 R.id.breed_Main_Frag -> {
                     navController.navigate(R.id.breed_Main_Frag)
-                    titleText.setText("Breeding")
+                    titleText.text = "Breeding"
                     true
                 }
                 R.id.profile_Main_Frag -> {
                     navController.navigate(R.id.profile_Main_Frag)
-                    titleText.setText("Profile")
+                    titleText.text = "Profile"
                     true
                 }
                 R.id.shop_Main_Frag -> {
                     navController.navigate(R.id.shop_Main_Frag)
-                    titleText.setText("Shop")
+                    titleText.text = "Shop"
                     true
                 }
                 R.id.wiki_Main_Frag -> {
                     navController.navigate(R.id.wiki_Main_Frag)
-                    titleText.setText("Wiki")
+                    titleText.text = "Wiki"
                     true
                 }
                 else ->
