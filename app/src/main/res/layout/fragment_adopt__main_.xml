@@ -6,9 +6,26 @@
     tools:context=".Adopt_Main_Frag">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Design adopt di sini" />
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/title_animalCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animal"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_animalCategory"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@id/title_animalCategory" />
+
+    </RelativeLayout>
 
 </FrameLayout>
