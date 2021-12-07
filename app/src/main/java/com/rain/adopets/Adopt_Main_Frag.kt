@@ -1,10 +1,13 @@
 package com.rain.adopets
 
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -29,9 +32,22 @@ class Adopt_Main_Frag : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_adopt__main_, container, false)
+        val v : View = inflater.inflate(R.layout.fragment_adopt__main_, container, false)
+        //Spinner Adapter for Pet Category
+        return setSpinner(v)
+    }
+
+    private fun setSpinner(view: View) : View{
+        val spinner : Spinner = view.findViewById(R.id.spinner_animalCategory)
+        val adapterAnimalCategory = ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.spinner_petCategoryItem,
+            android.R.layout.simple_spinner_dropdown_item
+        )
+        spinner.adapter = adapterAnimalCategory
+        return view
     }
 
     companion object {

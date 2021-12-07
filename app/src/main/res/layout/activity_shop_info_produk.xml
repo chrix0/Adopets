@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".shop_infoProduk">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_dog"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo"
+        android:paddingTop="15dp"
+        android:text="TEST DOGS ARE NOT FOODS"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rp.???,-"
+        android:textSize="17sp"
+        android:layout_below="@id/name"/>
+    <TextView
+        android:id="@+id/title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Information"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_below="@id/price"
+        android:paddingTop="15dp"/>
+    <View
+        style="@style/Divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/price"/>
+
+    <ScrollView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/title_info"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord."
+            android:textSize="13sp" />
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/information"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_marginTop="-9dp">
+
+        <LinearLayout
+            android:id="@+id/jumlahBarang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/title_jumlah"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="Jumlah"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/buttonDec"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#e09f12"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/Quantity"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="#a6a4a1"
+                    android:gravity="center"
+                    android:text="1"></EditText>
+
+                <Button
+                    android:id="@+id/buttonInc"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#e09f12"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="+" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addToCart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/jumlahBarang"
+            android:layout_marginTop="20dp"
+            android:background="#e09f12"
+
+            android:text="Add to cart" />
+    </RelativeLayout>
+</RelativeLayout>

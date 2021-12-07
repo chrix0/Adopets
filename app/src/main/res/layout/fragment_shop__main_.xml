@@ -5,10 +5,162 @@
     android:layout_height="match_parent"
     tools:context=".Shop_Main_Frag">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Design bagian shop di sini" />
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            >
+            <!--FOOD-->
+            <RelativeLayout
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/title_food"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pet food"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/moreFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/title_food"
+                    android:text="More items" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/title_food">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="140dp"
+                            android:layout_height="180dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#ffb845"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/photo"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/test_dog" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@id/photo"
+                                android:layout_marginTop="10dp"
+                                android:text="Weird fish as foodaa sadasda sdasdasd"
+                                android:textColor="#5D4037"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/price"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title"
+                                android:layout_marginTop="10dp"
+                                android:background="#fffc3d"
+                                android:gravity="center"
+                                android:text="Rp. 5000,-"
+                                android:textColor="@color/darkerBrown"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <!--UTENSILS-->
+            <RelativeLayout
+                android:id="@+id/utensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/title_utensils"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Utensils"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/moreUtensils"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/title_utensils"
+                    android:text="More items" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/title_utensils"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--OUTFIT-->
+            <RelativeLayout
+                android:id="@+id/outfit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_below="@id/utensils">
+                <TextView
+                    android:id="@+id/title_outfit"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Outfit"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/moreOutfit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/title_outfit"
+                    android:text="More items" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/title_outfit"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:contentDescription="Basket"
+        android:src="@drawable/shop_fab_basket"/>
 
 </FrameLayout>
