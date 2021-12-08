@@ -6,36 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".OA_petPic"
     android:padding="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="20">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step:"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 out of 3"/>
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Step:"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1 out of 3"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Foto hewan peliharaan Anda."
+        android:layout_weight="2"
         android:gravity="center"/>
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="12"
         android:background="@color/grey"
         android:id="@+id/photo"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:weightSum="10">
+        android:layout_height="0dp"
+        android:weightSum="10"
+        android:layout_weight="2">
         <Button
             android:id="@+id/openCamera"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:text="Open camera"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
         <Button
             android:id="@+id/openGallery"
             android:layout_width="0dp"
@@ -43,23 +64,30 @@
             android:layout_weight="4"
             android:text="From gallery"/>
     </LinearLayout>
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Warna yang dideteksi:"
-        android:gravity="center"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="@color/inchwormGreen"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pastikan objek dekat dengan kamera untuk mendapatkan hasil yang akurat."
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/toStep2"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Next"/>
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="bottom">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Warna yang dideteksi:"
+            android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/grey"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastikan objek dekat dengan kamera untuk hasil terbaik."
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/toStep2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Next"/>
+    </LinearLayout>
 </LinearLayout>
