@@ -19,12 +19,13 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity
+            android:name=".OA_petPic"
+            android:exported="false" />
+        <activity
+            android:name=".shop_productList"
+            android:exported="false" />
         <activity
             android:name=".shop_tracker"
             android:exported="false"
@@ -46,7 +47,11 @@
             android:exported="true"
             android:theme="@style/Theme.Adopets.NoActionBar"
             android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
