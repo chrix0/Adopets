@@ -5,17 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Shop_Main_Frag.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Shop_Main_Frag : Fragment() {
+
+    private lateinit var adapterFood : recycler_products_adapter
+    private lateinit var adapterUtensils : recycler_products_adapter
+    private lateinit var adapterOutfit : recycler_products_adapter
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,9 +32,37 @@ class Shop_Main_Frag : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop__main_, container, false)
+        val v : View = inflater.inflate(R.layout.fragment_shop__main_, container, false)
+        return doSomething(v)
+    }
+
+    private fun doSomething(v: View): View {
+        val foodList = v.findViewById<RecyclerView>(R.id.foodList)
+        val utensilsList = v.findViewById<RecyclerView>(R.id.utensilsList)
+        val outfitList = v.findViewById<RecyclerView>(R.id.outfitList)
+
+        val first5food : List<classProduk> = singletonData.petFoodList.take(5)
+        val first5uten : List<classProduk> = singletonData.petUtensilList.take(5)
+        val first5outfit : List<classProduk> = singletonData.petOutfitList.take(5)
+
+        adapterFood = recycler_products_adapter(first5food)
+        foodList.adapter = adapterFood
+        foodList.layoutManager = LinearLayoutManager(requireContext(),
+            LinearLayoutManager.HORIZONTAL, false)
+
+        adapterUtensils = recycler_products_adapter(first5uten)
+        utensilsList.adapter = adapterUtensils
+        utensilsList.layoutManager = LinearLayoutManager(requireContext(),
+            LinearLayoutManager.HORIZONTAL, false)
+
+        adapterOutfit = recycler_products_adapter(first5outfit)
+        outfitList.adapter = adapterOutfit
+        outfitList.layoutManager = LinearLayoutManager(requireContext(),
+            LinearLayoutManager.HORIZONTAL, false)
+
+        return v
     }
 
     companion object {

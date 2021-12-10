@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adopets">
         <activity
+            android:name=".register"
+            android:exported="false"/>
+        <activity
             android:name=".oa_recommend"
             android:exported="false" />
         <activity
@@ -60,6 +63,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <meta-data
