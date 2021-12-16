@@ -4,11 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/all_curved_corner.xml" value="0.19583333333333333" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/shape_circle.xml" value="0.171875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/font/.xml" value="0.11041666666666666" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.3333333333333333" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.22" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.2875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank.xml" value="0.240625" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank1.xml" value="0.1" />
@@ -17,27 +14,26 @@
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.1" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.22" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.14666666666666667" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/xml/root_preferences.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_oa_outfit_pic.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_oa_pet_pic.xml" value="0.14" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_oa_recommend.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_oa_result.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.22" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.22" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_product_list.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_tracker.xml" value="0.33" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.15833333333333333" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.2" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.25" />
-        <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.21" />
-        <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_recommend.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_outfit_pic.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_pet_pic.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_recommend.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_result.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_personaldata.xml" value="0.25" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_register.xml" value="0.1890625" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.5" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_shop_product_list.xml" value="0.1921875" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_shop_tracker.xml" value="0.33" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.33" />
+        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.25" />
       </map>
     </option>
   </component>
@@ -46,5 +42,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -23,13 +23,14 @@
         android:text="TEST DOGS ARE NOT FOODS"
         android:textSize="17sp"
         android:textStyle="bold" />
+
     <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/name"
         android:text="Rp.???,-"
-        android:textSize="17sp"
-        android:layout_below="@id/name"/>
+        android:textSize="17sp" />
     <TextView
         android:id="@+id/title_info"
         android:layout_width="match_parent"

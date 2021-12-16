@@ -17,8 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adopets">
         <activity
+            android:name=".Personaldata"
+            android:exported="false" />
+        <activity
             android:name=".register"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".oa_recommend"
             android:exported="false" />
