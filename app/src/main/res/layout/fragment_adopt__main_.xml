@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,23 +8,134 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <LinearLayout
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title_animalCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animal"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spinner_animalCategory"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="105dp"
+                />
 
-        <TextView
-            android:id="@+id/title_animalCategory"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Animal"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textStyle="bold" />
+            android:layout_below="@id/category"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
-        <Spinner
-            android:id="@+id/spinner_animalCategory"
-            android:layout_width="226dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_toRightOf="@id/title_animalCategory" />
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="275dp"
+                android:background="#ffb845"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test_dog" />
+
+                <ImageView
+                    android:id="@+id/titleIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/photo"
+                    android:layout_marginTop="11dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/adopt_name" />
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/photo"
+                    android:layout_toRightOf="@id/titleIcon"
+                    android:text="Stray Cat"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/genderIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/titleIcon"
+                    android:layout_marginTop="11dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/adopt_gender"/>
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/genderIcon"
+                    android:text="Male"
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/genderIcon"
+                    android:layout_marginTop="11dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/adopt_location"/>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gender"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/locationIcon"
+                    android:text="Medan, Indonesia"
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/adopt"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location"
+                    android:layout_marginTop="10dp"
+
+                    android:gravity="center"
+                    android:text="Adopt"
+                    android:textColor="@color/darkerBrown"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
+
+
+
 
 </FrameLayout>

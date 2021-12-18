@@ -20,6 +20,15 @@
             android:name=".Personaldata"
             android:exported="false" />
         <activity
+            android:name=".wiki_species"
+            android:exported="true" />
+        <activity
+            android:name=".wiki_info"
+            android:exported="true" />
+        <activity
+            android:name=".breed_info"
+            android:exported="true" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity
@@ -31,6 +40,15 @@
         <activity
             android:name=".OA_outfitPic"
             android:exported="false" />
+        <activity
+            android:name=".adopt_track"
+            android:exported="true" />
+        <activity
+            android:name=".adopt_form"
+            android:exported="true" />
+        <activity
+            android:name=".adopt_info"
+            android:exported="true" /> <!-- Copy activity login di sini -->
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
@@ -68,7 +86,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
