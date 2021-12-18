@@ -13,36 +13,33 @@
         android:id="@+id/productImg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_weight="70"
         android:src="@drawable/test_dog" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/productImg"
-        android:layout_weight="6"
         android:paddingTop="15dp"
         android:text="TEST DOGS ARE NOT FOODS"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_height="wrap_content"
         android:text="Rp.???,-"
-        android:textSize="17sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/title_info"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"
-        android:paddingTop="15dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
         android:text="Information"
-        android:textSize="17sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <View
@@ -73,11 +70,10 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
         android:layout_below="@id/information"
-        android:layout_alignParentBottom="true"
-        android:layout_weight="22"
-        android:gravity="bottom">
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:id="@+id/jumlahBarang"
@@ -130,9 +126,8 @@
         <Button
             android:id="@+id/addToCart"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/jumlahBarang"
-            android:layout_marginTop="20dp"
             android:background="#e09f12"
 
             android:text="Add to cart" />
