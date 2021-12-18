@@ -12,44 +12,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_weight="7"
         android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="9"
-            android:hint="Label"
             android:layout_gravity="center"
-            app:placeholderText="Cari produk yang anda mau">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="8"
+            android:background="@color/white"
+            android:hint="Cari produk"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black" />
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center">
 
             <ImageButton
+                android:id="@+id/sortButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/shop_prod_sort" />
+                android:src="@drawable/ic_sort" />
         </RelativeLayout>
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="90">
-
+        android:layout_weight="93"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="outsideOverlay">
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:id="@+id/productList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </ScrollView>
 
 </LinearLayout>

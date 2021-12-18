@@ -1,7 +1,16 @@
 package com.rain.adopets
 
+import com.google.gson.Gson
+import java.text.DecimalFormat
+import java.text.NumberFormat
+
 object singletonData {
-    var petFoodList : List<classProduk> = mutableListOf(
+    //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
+    val toJson : Gson = Gson()
+    //Formatting harga
+    //soon
+
+    var petFoodList : MutableList<classProduk> = mutableListOf(
         classProduk(
             1,
             "Royal Canin Veterinary Dog - Hypoallergenic DR 21 2kg",
@@ -61,7 +70,7 @@ object singletonData {
         )
     )
 
-    var petUtensilList : List<classProduk> = mutableListOf(
+    var petUtensilList : MutableList<classProduk> = mutableListOf(
         classProduk(
             1,
             "Royal Canin Veterinary Dog - Hypoallergenic DR 21 2kg",
@@ -122,7 +131,7 @@ object singletonData {
     )
 
 
-    var petOutfitList : List<classProduk> = mutableListOf(
+    var petOutfitList : MutableList<classProduk> = mutableListOf(
         classProduk(
             1,
             "Royal Canin Veterinary Dog - Hypoallergenic DR 21 2kg",
@@ -181,4 +190,11 @@ object singletonData {
             "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
         )
     )
+
+    //UNIV FUNCTION
+    fun formatHarga(harga : Int) : String{
+        var formatter : DecimalFormat = NumberFormat.getInstance() as DecimalFormat
+        formatter.applyPattern("#,###")
+        return formatter.format(harga)
+    }
 }

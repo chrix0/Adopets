@@ -39,7 +39,9 @@
             android:exported="false" />
         <activity
             android:name=".shop_productList"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateVisible|adjustNothing"/>
         <activity
             android:name=".shop_tracker"
             android:exported="false"

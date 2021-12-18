@@ -1,12 +1,16 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
+import java.io.Serializable
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,6 +43,7 @@ class Shop_Main_Frag : Fragment() {
     }
 
     private fun doSomething(v: View): View {
+        //RECYCLER VIEW
         val foodList = v.findViewById<RecyclerView>(R.id.foodList)
         val utensilsList = v.findViewById<RecyclerView>(R.id.utensilsList)
         val outfitList = v.findViewById<RecyclerView>(R.id.outfitList)
@@ -47,21 +52,59 @@ class Shop_Main_Frag : Fragment() {
         val first5uten : List<classProduk> = singletonData.petUtensilList.take(5)
         val first5outfit : List<classProduk> = singletonData.petOutfitList.take(5)
 
-        adapterFood = recycler_products_adapter(first5food)
+        adapterFood = recycler_products_adapter(first5food){
+            val info = Intent(requireContext(), shop_infoProduk::class.java)
+            info.putExtra(SHOW_PRODUCT_INFO, it)
+            info.putExtra(CHANGE_TITLE,"Info Produk")
+            startActivity(info)
+        }
         foodList.adapter = adapterFood
         foodList.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.HORIZONTAL, false)
 
-        adapterUtensils = recycler_products_adapter(first5uten)
+        adapterUtensils = recycler_products_adapter(first5uten){
+            val info = Intent(requireContext(), shop_infoProduk::class.java)
+            info.putExtra(SHOW_PRODUCT_INFO, it)
+            info.putExtra(CHANGE_TITLE,"Info Produk")
+            startActivity(info)
+        }
         utensilsList.adapter = adapterUtensils
         utensilsList.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.HORIZONTAL, false)
 
-        adapterOutfit = recycler_products_adapter(first5outfit)
+        adapterOutfit = recycler_products_adapter(first5outfit){
+            val info = Intent(requireContext(), shop_infoProduk::class.java)
+            info.putExtra(SHOW_PRODUCT_INFO, it)
+            info.putExtra(CHANGE_TITLE,"Info Produk")
+            startActivity(info)
+        }
         outfitList.adapter = adapterOutfit
         outfitList.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.HORIZONTAL, false)
 
+        //MORE BUTTON
+        val moreFood = v.findViewById<Button>(R.id.moreFood)
+        val moreUtensils = v.findViewById<Button>(R.id.moreUtensils)
+        val moreOutfit = v.findViewById<Button>(R.id.moreOutfit)
+
+        moreFood.setOnClickListener {
+            val more = Intent(requireContext(), shop_productList::class.java)
+            more.putExtra(EXTRA_PRODUCT,singletonData.petFoodList as ArrayList<classProduk>)
+            more.putExtra(CHANGE_TITLE, "Pet Foods")
+            startActivity(more)
+        }
+        moreUtensils.setOnClickListener {
+            val more = Intent(requireContext(), shop_productList::class.java)
+            more.putExtra(EXTRA_PRODUCT,singletonData.petUtensilList as ArrayList<classProduk>)
+            more.putExtra(CHANGE_TITLE, "Pet Utensils")
+            startActivity(more)
+        }
+        moreOutfit.setOnClickListener {
+            val more = Intent(requireContext(), shop_productList::class.java)
+            more.putExtra(EXTRA_PRODUCT,singletonData.petOutfitList as ArrayList<classProduk>)
+            more.putExtra(CHANGE_TITLE, "Pet Outfit")
+            startActivity(more)
+        }
         return v
     }
 
