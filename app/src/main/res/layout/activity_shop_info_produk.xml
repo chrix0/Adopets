@@ -88,7 +88,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
-                android:text="Jumlah"
+                android:text="Quantity"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -130,6 +130,6 @@
             android:layout_below="@id/jumlahBarang"
             android:background="#e09f12"
 
-            android:text="Add to cart" />
+            android:text="Add to basket" />
     </RelativeLayout>
 </LinearLayout>

@@ -93,8 +93,9 @@
                 android:id="@+id/outfit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:layout_below="@id/utensils">
+                android:layout_below="@id/utensils"
+                android:padding="20dp">
+
                 <TextView
                     android:id="@+id/title_outfit"
                     android:layout_width="233dp"
@@ -114,22 +115,23 @@
                     android:id="@+id/scrollOutfit"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:layout_marginTop="20dp"
                     android:layout_below="@id/title_outfit"
+                    android:layout_marginTop="20dp"
                     android:scrollbars="horizontal">
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/outfitList"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </ScrollView>
 
                 <Button
                     android:id="@+id/analyzer"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Try our outfit analyzer!"
                     android:layout_below="@id/scrollOutfit"
-                    android:drawableLeft="@drawable/shop_frag_analyzer"/>
+                    android:drawableLeft="@drawable/shop_frag_analyzer"
+                    android:text="Try our outfit analyzer!" />
 
             </RelativeLayout>
 

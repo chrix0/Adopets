@@ -20,17 +20,26 @@
             android:background="#ffb845"
             android:padding="10dp">
 
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:id="@+id/gambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    app:siBorderColor="#000000"
+                    app:siBorderWidth="1dp"
+                    app:siRadius="6dp"
+                    app:siSquare="false" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_below="@id/photo"
+                android:layout_below="@id/gambar"
                 android:layout_marginTop="10dp"
                 android:text="Seharusnya ini tidak muncul"
                 android:textColor="#5D4037"

@@ -55,7 +55,7 @@ class Shop_Main_Frag : Fragment() {
         adapterFood = recycler_products_adapter(first5food){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Info Produk")
+            info.putExtra(CHANGE_TITLE,"Product Info")
             startActivity(info)
         }
         foodList.adapter = adapterFood
@@ -65,7 +65,7 @@ class Shop_Main_Frag : Fragment() {
         adapterUtensils = recycler_products_adapter(first5uten){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Info Produk")
+            info.putExtra(CHANGE_TITLE,"Product Info")
             startActivity(info)
         }
         utensilsList.adapter = adapterUtensils
@@ -75,7 +75,7 @@ class Shop_Main_Frag : Fragment() {
         adapterOutfit = recycler_products_adapter(first5outfit){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Info Produk")
+            info.putExtra(CHANGE_TITLE,"Product Info")
             startActivity(info)
         }
         outfitList.adapter = adapterOutfit
@@ -90,13 +90,13 @@ class Shop_Main_Frag : Fragment() {
         moreFood.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petFoodList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Foods")
+            more.putExtra(CHANGE_TITLE, "Pet Food")
             startActivity(more)
         }
         moreUtensils.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petUtensilList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Utensils")
+            more.putExtra(CHANGE_TITLE, "Pet Utensil")
             startActivity(more)
         }
         moreOutfit.setOnClickListener {

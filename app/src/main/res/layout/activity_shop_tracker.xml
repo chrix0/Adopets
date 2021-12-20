@@ -33,7 +33,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="Sedang dipersiapkan"
+                    android:text="In preparation"
                     android:layout_weight="3"
                     android:textColor="@color/white"
                     android:background="@color/black"
@@ -93,7 +93,7 @@
                             android:id="@+id/showColor"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/shape_circle"></View>
+                            android:background="@color/inchwormGreen"></View>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -109,14 +109,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/produkTampil"
-                android:text="Jumlah item : 3" />
+                android:text="Item count : 3" />
 
             <Button
                 android:id="@+id/lihatProdukLain"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/jumlahItem"
-                android:text="Lihat Produk lainnya"
+                android:text="Show all products"
                 android:textSize="10dp" />
 
             <Button
@@ -124,8 +124,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/lihatProdukLain"
-                android:text="Batal pemesanan"
-                android:textSize="10dp" />
+                android:text="Cancel order"
+                android:textSize="10dp"
+                android:background="@color/transparent"/>
         </RelativeLayout>
 
     </LinearLayout>
