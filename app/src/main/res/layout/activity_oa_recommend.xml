@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
-        android:text="Berikut rekomendasi yang mungkin cocok untuk hewan peliharaan Anda." />
+        android:text="Here is our recommedation based on your pet's color." />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -49,16 +49,18 @@
         android:layout_height="0dp"
         android:layout_weight="33"
         android:gravity="bottom">
+
         <Button
             android:id="@+id/tryAgain"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Ingin mencoba lagi?"/>
+            android:text="Try again" />
         <Button
             android:id="@+id/backToShop"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Kembali ke halaman shop"
+            android:text="Return to shop"
+            android:background="@color/transparent"
             android:layout_below="@id/tryAgain" />
     </RelativeLayout>
 </LinearLayout>

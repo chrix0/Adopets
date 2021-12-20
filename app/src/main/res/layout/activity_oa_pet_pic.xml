@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Foto hewan peliharaan Anda."
+        android:text="Take a picture of your pet."
         android:layout_weight="2"
         android:gravity="center"/>
     <ImageView
@@ -38,14 +38,14 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="0.5"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:weightSum="10"
-        android:layout_weight="2">
+        android:layout_weight="2.5">
         <Button
             android:id="@+id/openCamera"
             android:layout_width="0dp"
@@ -72,7 +72,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Warna yang dideteksi:"
+            android:text="Detected color"
             android:gravity="center"/>
         <View
             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pastikan objek dekat dengan kamera untuk hasil terbaik."
+            android:text="Make sure the object is close to the camera for the best result"
             android:gravity="center"/>
         <Button
             android:id="@+id/toStep2"

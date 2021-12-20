@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight="5">
+        android:layout_weight="2">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,12 +34,12 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight="40">
+        android:layout_weight="50">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hewan peliharaan Anda:"
+            android:text="Your pet:"
             android:gravity="center" />
 
         <ImageView
@@ -52,7 +52,7 @@
             android:id="@+id/image2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hewan pakaian hewan peliharaan Anda:"
+            android:text="Your pet's outfit:"
             android:gravity="center"/>
 
         <ImageView
@@ -65,12 +65,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="20"
+        android:layout_weight="25"
         android:weightSum="10">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Warna rekomendasi dan tingkat kemiripan"
+            android:text="Recommended color and similiarity percentage"
             android:gravity="center"
             android:layout_weight="1"/>
 
@@ -124,14 +124,13 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="15">
+        android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/toRekomendasi"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Cek rekomendasi outfit yang cocok"
-            android:layout_alignParentBottom="true"/>
+            android:text="Recommended outfits" />
     </RelativeLayout>
 
 </LinearLayout>

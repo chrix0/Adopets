@@ -19,7 +19,7 @@
             android:id="@+id/title_metode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pilih Metode pembayaran"
+            android:text="Choose payment method"
             android:textSize="17sp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -33,7 +33,7 @@
                 android:id="@+id/kartu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kartu kredit / Gopay / OVO"/>
+                android:text="Credit card / Gopay / OVO"/>
             <RadioButton
                 android:id="@+id/virtual"
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7.5"
-                    android:text="Alamat Pengiriman"
+                    android:text="Shipping address"
                     android:textSize="17sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -97,7 +97,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7.5"
-                    android:text="Nomor telepon"
+                    android:text="Phone number"
                     android:textSize="17sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -171,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:textStyle="bold"
-            android:text="Ongkos kirim"/>
+            android:text="Shipping cost"/>
         <TextView
             android:id="@+id/ongkir"
             android:layout_width="0dp"
