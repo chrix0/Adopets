@@ -10,6 +10,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.fragment_shop__main_.*
 import java.io.Serializable
 
 // TODO: Rename parameter arguments, choose names that match
@@ -104,6 +105,12 @@ class Shop_Main_Frag : Fragment() {
             more.putExtra(EXTRA_PRODUCT,singletonData.petOutfitList as ArrayList<classProduk>)
             more.putExtra(CHANGE_TITLE, "Pet Outfit")
             startActivity(more)
+        }
+
+        val fab = v.findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fabBasket)
+        fab.setOnClickListener {
+            var keBasket = Intent(requireContext(), shop_basket::class.java)
+            startActivity(keBasket)
         }
         return v
     }

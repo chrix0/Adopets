@@ -20,110 +20,19 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="69"
+        android:layout_weight="79"
         android:scrollbars="vertical">
-
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/basketList"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="#edcf0e"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:weightSum="4">
-
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1.5"
-                android:scaleType="centerCrop"
-                android:src="@drawable/test_dog" />
-
-            <RelativeLayout
-                android:id="@+id/infoArea"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@id/photo"
-                android:layout_weight="2.5">
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:text="Basket test ###########################"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/price"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_below="@id/name"
-                    android:text="Rp.???,-"
-                    android:textSize="12sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/price"
-                    android:gravity="center_vertical"
-                    android:weightSum="4"
-                    android:orientation="horizontal">
-
-                    <View
-                        android:id="@+id/showColor"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/shape_circle"></View>
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="4"
-                        android:gravity="end">
-
-                        <TextView
-                            android:id="@+id/decrease"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textSize="15sp"
-                            android:clickable="true"/>
-
-                        <EditText
-                            android:id="@+id/integer_number"
-                            style=""
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:layout_toRightOf="@id/decrease"
-                            android:background="@color/sandyBrown"
-                            android:text="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp"
-                            android:inputType="none"/>
-
-                        <TextView
-                            android:id="@+id/increase"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_toRightOf="@id/integer_number"
-                            android:textSize="15sp"
-                            android:gravity="center"
-                            android:text="+"
-                            android:clickable="true"/>
-                    </RelativeLayout>
-                </LinearLayout>
-            </RelativeLayout>
-        </LinearLayout>
+            android:layout_height="match_parent" />
     </ScrollView>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"></Space>
+
     <View
         style="@style/Divider"
         android:layout_width="match_parent"
@@ -154,55 +63,15 @@
             android:text="Rp. 0"
             android:gravity="end"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="5"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:textStyle="bold"
-            android:text="Shipping cost"/>
-        <TextView
-            android:id="@+id/ongkir"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Rp. 0"
-            android:gravity="end"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="5"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:textStyle="bold"
-            android:text="Total"/>
-        <TextView
-            android:id="@+id/total"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Rp. 0"
-            android:gravity="end"/>
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="18"
+        android:layout_weight="12"
         android:gravity="bottom">
 
         <Button
-            android:id="@+id/addToCart"
+            android:id="@+id/toCheckout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#e09f12"

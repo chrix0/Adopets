@@ -114,13 +114,8 @@
                 android:id="@+id/telp"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:text="083199020730"/>
-
+                android:text="083199020700"/>
         </LinearLayout>
-
-
-
-
 
     </RelativeLayout>
 

@@ -24,7 +24,7 @@ class shop_productList : AppCompatActivity() {
         adapter = recycler_products_adapter(tempList){
             val info = Intent(this, shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Info Produk")
+            info.putExtra(CHANGE_TITLE,"Product Info")
             startActivity(info)
         }
 
