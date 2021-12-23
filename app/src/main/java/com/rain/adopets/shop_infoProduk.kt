@@ -1,5 +1,6 @@
 package com.rain.adopets
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.squareup.picasso.Picasso
@@ -23,7 +24,35 @@ class shop_infoProduk : AppCompatActivity() {
         name.text = produk.namaProduk
         price.text = "Rp." + singletonData.formatHarga(produk.hargaProduk)
         infoText.text = produk.description
+        Quantity.text = "1"
 
+        addToCart.setOnClickListener {
+            val info = Intent(this, shop_basket::class.java)
+            var itemBasket = classItemBasket(
+                produk.idProduk,
+                produk.namaProduk,
+                produk.hargaProduk,
+                produk.urlGambarProduk,
+                produk.description,
+                Quantity.text.toString().toInt()
+            )
+            info.putExtra(ADD_TO_CART, itemBasket)
+            startActivity(info)
+        }
+
+        buttonInc.setOnClickListener{
+            val before = Quantity.text.toString().toInt()
+            var after = before + 1
+            Quantity.setText(after.toString())
+        }
+
+        buttonDec.setOnClickListener{
+            val before = Quantity.text.toString().toInt()
+            if(before > 1) {
+                var after = before - 1
+                Quantity.setText(after.toString())
+            }
+        }
     }
     //Back ketika menekan tombol up
     override fun onSupportNavigateUp(): Boolean {

@@ -5,11 +5,34 @@ import java.text.DecimalFormat
 import java.text.NumberFormat
 
 object singletonData {
-    //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
-    val toJson : Gson = Gson()
-    //Formatting harga
-    //soon
 
+    //1. DATABASE + METHOD FITUR =============================================
+
+    // LOGIN SIGNUP + BASKET
+    var accList : MutableList<classAccount> = mutableListOf(
+        classAccount(
+            0,
+            "TESTACCOUNT",
+            "TEST",
+            "Test Account",
+            "testaccount@gmail.com",
+            mutableListOf()
+        )
+    )
+
+    var currentAccId : Int = 0
+
+    fun subtotalInCart() : Int{
+        var total = 0
+        for (i : classItemBasket in accList[currentAccId].cartContent){
+            total += i.hargaProduk * i.quantity
+        }
+        return total
+    }
+
+    fun totalInCart() : Int = subtotalInCart() + 5000
+
+    // SHOP PRODUCTS
     var petFoodList : MutableList<classProduk> = mutableListOf(
         classProduk(
             1,
@@ -191,10 +214,16 @@ object singletonData {
         )
     )
 
-    //UNIV FUNCTION
+    //2. UNIVERSAL METHOD + LIBRARY INIT =============================================
+
     fun formatHarga(harga : Int) : String{
         var formatter : DecimalFormat = NumberFormat.getInstance() as DecimalFormat
         formatter.applyPattern("#,###")
         return formatter.format(harga)
     }
+
+    //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
+    val toJson : Gson = Gson()
+
+
 }
