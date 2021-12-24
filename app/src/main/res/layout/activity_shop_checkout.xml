@@ -76,7 +76,9 @@
                 android:id="@+id/alamat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Jl. BZ Hamid Komplek Mitra Lama no.11 LK X, Sumatera Utara, Medan Johor, blablablablablaaisjdaisjdaidjaoidja aisdjaoidajdoiadoisadjoiajdaodaoidsjoij"/>
+                android:text="Jl. BZ Hamid Komplek Mitra Lama no.11 LK X, Sumatera Utara, Medan Johor, blablablablablaaisjdaisjdaidjaoidja aisdjaoidajdoiadoisadjoiajdaodaoidsjoij"
+                android:maxLines="3"
+                android:ellipsize="end"/>
 
         </LinearLayout>
         <LinearLayout
