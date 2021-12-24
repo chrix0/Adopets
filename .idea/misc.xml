@@ -31,6 +31,32 @@
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/productlist_sort.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/xml/root_preferences.xml" value="0.14666666666666667" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable-anydpi/ic_placehold.xml" value="0.12222222222222222" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable/shape_circle.xml" value="0.2703125" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/font/.xml" value="0.284375" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_form.xml" value="0.264" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_info.xml" value="0.4" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_track.xml" value="0.536" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_breed_form.xml" value="0.264" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_breed_info.xml" value="0.264" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_oa_pet_pic.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_shop_basket.xml" value="0.536" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_shop_checkout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_shop_product_list.xml" value="0.176" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_info.xml" value="0.264" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_species.xml" value="0.264" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.319047619047619" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_breed__main_.xml" value="0.536" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_shop__main_.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.3763020833333333" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/recycler_adopt.xml" value="0.536" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.22" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.22" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_tracker.xml" value="0.33" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_adopt_track.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_breed_info.xml" value="0.22" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.22" />

@@ -38,98 +38,13 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
-            <RelativeLayout
-                android:layout_width="180dp"
-                android:layout_height="275dp"
-                android:background="#ffb845"
-                android:padding="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center_horizontal">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adoptRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="150dp"
-                    android:layout_height="120dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/test_dog" />
 
-                <ImageView
-                    android:id="@+id/titleIcon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_below="@id/photo"
-                    android:layout_marginTop="11dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/adopt_name" />
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/photo"
-                    android:layout_toRightOf="@id/titleIcon"
-                    android:text="Stray Cat"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#5D4037"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/genderIcon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_below="@id/titleIcon"
-                    android:layout_marginTop="11dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/adopt_gender"/>
-
-                <TextView
-                    android:id="@+id/gender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/genderIcon"
-                    android:text="Male"
-                    android:textColor="#5D4037"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-                <ImageView
-                    android:id="@+id/locationIcon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_below="@id/genderIcon"
-                    android:layout_marginTop="11dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/adopt_location"/>
-
-                <TextView
-                    android:id="@+id/location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/gender"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/locationIcon"
-                    android:text="Medan, Indonesia"
-                    android:textColor="#5D4037"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/adopt"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/location"
-                    android:layout_marginTop="10dp"
-
-                    android:gravity="center"
-                    android:text="Adopt"
-                    android:textColor="@color/darkerBrown"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
 
         </LinearLayout>
 

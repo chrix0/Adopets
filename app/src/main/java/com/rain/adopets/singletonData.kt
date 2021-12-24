@@ -216,8 +216,20 @@ object singletonData {
             "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
         )
     )
-
-    //2. UNIVERSAL METHOD + LIBRARY INIT =============================================
+    // Adopt
+    var adoptList : MutableList<classAdopt> = mutableListOf(
+        classAdopt(
+            1,
+            "Lord Umam",
+            "Ginger Cat",
+            "Male",
+            "Medan, Indonesia",
+            "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
+        )
+    )
+    var currentAdoptId : Int = 0
+    //2. UNIVERSAL METHOD + LIBRARY INIT ============================================
 
     fun formatHarga(harga : Int) : String{
         var formatter : DecimalFormat = NumberFormat.getInstance() as DecimalFormat
