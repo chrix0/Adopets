@@ -10,7 +10,7 @@ import java.util.*
 data class classTransaction(
     var items: MutableList<classItemBasket> = mutableListOf(),
     var method: String = "",
-    var address: String = "",
+    var address: MutableList<String> = mutableListOf(),
     var phoneNumber: String = "",
     var datePurchase : String = "",
     var subTotal : Int = 0,

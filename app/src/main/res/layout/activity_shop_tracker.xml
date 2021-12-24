@@ -7,127 +7,141 @@
     tools:context=".shop_tracker"
     android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@color/grey"
-            android:padding="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/status"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:weightSum="4">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Status"
-                    android:layout_weight="1"
-                    android:background="@color/sandyBrown"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="In preparation"
-                    android:layout_weight="3"
-                    android:textColor="@color/white"
-                    android:background="@color/black"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/produkTampil"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_below="@id/status"
-                android:weightSum="10">
-
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_weight="3"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/test_dog" />
-
-                <RelativeLayout
-                    android:id="@+id/infoArea"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@id/photo"
-                    android:layout_weight="7"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Test dogs are not foods"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/price"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/name"
-                        android:text="Rp.???,-"
-                        android:textSize="12sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/price"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:weightSum="4">
-
-                        <View
-                            android:id="@+id/showColor"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@color/inchwormGreen"></View>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="x1"
-                            android:layout_marginLeft="5dp"/>
-                    </LinearLayout>/
-                </RelativeLayout>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/jumlahItem"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/produkTampil"
-                android:text="Item count : 3" />
+                android:background="@color/sandyBrown"
+                android:padding="10dp">
 
-            <Button
-                android:id="@+id/lihatProdukLain"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/jumlahItem"
-                android:text="Show all products"
-                android:textSize="10dp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Delivered"
+                            android:layout_weight="4"
+                            android:textColor="@color/black"
+                            android:background="@color/inchwormGreen"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/batal"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/lihatProdukLain"
-                android:text="Cancel order"
-                android:textSize="10dp"
-                android:background="@color/transparent"/>
-        </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/produkTampil"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/status"
+                    android:background="@color/grey"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
 
-    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test_dog" />
+
+                    <RelativeLayout
+                        android:id="@+id/infoArea"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/photo"
+                        android:layout_weight="7"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Test dogs are not foods"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/name"
+                            android:text="Rp.???,-"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/showColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Quantity : "
+                                android:textSize="12sp"></TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="1"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        /
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/jumlahItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/produkTampil"
+                    android:text="Total product count: 3" />
+
+                <Button
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/jumlahItem"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:text="Details"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/darkerBrown"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/batal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/details"
+
+                    android:background="@color/transparent"
+                    android:text="Cancel order"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </ScrollView>

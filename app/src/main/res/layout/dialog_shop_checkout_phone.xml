@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/grey"
                 android:lines="1"
+                android:padding="5dp"
                 android:inputType="phone"
                 android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>

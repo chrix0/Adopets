@@ -31,29 +31,29 @@ class shop_checkout : AppCompatActivity() {
         var hour = curDate.get(Calendar.HOUR_OF_DAY)
         var minute = curDate.get(Calendar.MINUTE)
 
-        var transaksi : classTransaction = classTransaction(datePurchase = "${day}-${month}-${year} ${hour}:${minute}")
+        var transaksi = classTransaction(datePurchase = "${day}-${month}-${year} ${hour}:${minute}")
 
         //items
         transaksi.items = user.cartContent
 
-        val promptAddress : String = "(Please tap the edit button to input your address)"
-        val promptPhone : String = "(Please tap the edit button to input your phone number)"
+        val promptAddress : String = "(Tap edit button to add address)"
+        val promptPhone : String = "(Tap edit button to add phone number)"
 
         //address cara 1
-        if(user.shippingAddress.equals("")){
+        if(user.shippingAddress.size == 0){
             alamat.setText(promptAddress)
         }
         else{
             transaksi.address = user.shippingAddress
-            alamat.setText(user.shippingAddress)
+            alamat.setText(formatAlamat(user.shippingAddress))
         }
         //phoneNumber cara 1
         if(user.phoneNumber.equals("")){
-            alamat.setText(promptPhone)
+            telp.setText(promptPhone)
         }
         else{
             transaksi.phoneNumber = user.phoneNumber
-            alamat.setText(user.phoneNumber)
+            telp.setText(user.phoneNumber)
         }
 
         //method
@@ -85,20 +85,27 @@ class shop_checkout : AppCompatActivity() {
             var done = layout.findViewById<Button>(R.id.saveAddress)
             var cancel = layout.findViewById<Button>(R.id.cancelAddress)
 
+            if(singletonData.accList[singletonData.currentAccId].shippingAddress.size != 0){
+                address.setText(singletonData.accList[singletonData.currentAccId].shippingAddress[0])
+                city.setText(singletonData.accList[singletonData.currentAccId].shippingAddress[1])
+                province.setText(singletonData.accList[singletonData.currentAccId].shippingAddress[2])
+                postal.setText(singletonData.accList[singletonData.currentAccId].shippingAddress[3])
+            }
+
             done.setOnClickListener {
                 if(address.text.toString().equals("")
                     || province.text.toString().equals("")
                     || city.text.toString().equals("")
                     || postal.text.toString().equals("")
                 ){
-                    Toast.makeText(this,"You need to fill every field.",Toast.LENGTH_SHORT)
+                    Toast.makeText(this,"You need to fill every field.",Toast.LENGTH_SHORT).show()
                 }
                 else{
-                    user.shippingAddress = "${address.text.toString()}, ${city.text.toString()}, ${province.text.toString()}, ID ${postal.text.toString()}"
+                    user.shippingAddress = mutableListOf<String>(address.text.toString(), city.text.toString(), province.text.toString(), postal.text.toString())
                     singletonData.accList[singletonData.currentAccId].shippingAddress = user.shippingAddress
-                    transaksi.phoneNumber = user.shippingAddress
-                    alamat.setText(user.shippingAddress)
-                    Toast.makeText(this,"Your address has been successfully updated.",Toast.LENGTH_SHORT)
+                    transaksi.address = user.shippingAddress
+                    alamat.setText(formatAlamat(transaksi.address))
+                    Toast.makeText(this,"Your address has been successfully updated.",Toast.LENGTH_SHORT).show()
                     creator.cancel()
                 }
             }
@@ -124,16 +131,20 @@ class shop_checkout : AppCompatActivity() {
             var cancel = layout.findViewById<Button>(R.id.cancelPhone)
 
             //Code here
+            if(!singletonData.accList[singletonData.currentAccId].phoneNumber.equals("")){
+                phone.setText(singletonData.accList[singletonData.currentAccId].phoneNumber)
+            }
+
             done.setOnClickListener {
                 if(phone.text.toString().equals("")){
-                    Toast.makeText(this,"You need to enter your phone number.",Toast.LENGTH_SHORT)
+                    Toast.makeText(this,"You need to enter your phone number.",Toast.LENGTH_SHORT).show()
                 }
                 else{
                     user.phoneNumber = phone.text.toString()
                     singletonData.accList[singletonData.currentAccId].phoneNumber = user.phoneNumber
                     transaksi.phoneNumber = user.phoneNumber
                     telp.setText(user.phoneNumber)
-                    Toast.makeText(this,"Your phone number has been successfully updated.",Toast.LENGTH_SHORT)
+                    Toast.makeText(this,"Your phone number has been successfully updated.",Toast.LENGTH_SHORT).show()
                     creator.cancel()
                 }
             }
@@ -151,10 +162,10 @@ class shop_checkout : AppCompatActivity() {
         subtotal.setText("Rp." +singletonData.formatHarga(transaksi.subTotal))
 
         transaksi.shippingCost = ongkos
-        ongkir.setText(singletonData.formatHarga(transaksi.shippingCost))
+        ongkir.setText("Rp." +singletonData.formatHarga(transaksi.shippingCost))
 
         transaksi.Total = singletonData.totalInCart()
-        total.setText(singletonData.formatHarga(transaksi.Total))
+        total.setText("Rp." +singletonData.formatHarga(transaksi.Total))
 
         checkout.setOnClickListener {
             singletonData.accList[singletonData.currentAccId].cartContent.clear()
@@ -165,8 +176,11 @@ class shop_checkout : AppCompatActivity() {
         }
     }
 
+    fun formatAlamat(alamat : MutableList<String>) = "${alamat[0]}, ${alamat[1]}, ${alamat[2]}, ID ${alamat[3]}"
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
     }
+
 }

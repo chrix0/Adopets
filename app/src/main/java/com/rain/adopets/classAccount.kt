@@ -11,7 +11,7 @@ data class classAccount(
     var fullName: String,
     var email: String,
     var cartContent: MutableList<classItemBasket>,
-    var shippingAddress : String = "",
+    var shippingAddress : MutableList<String>,
     var phoneNumber : String = "",
     var transactionHistory: MutableList<classTransaction>
 ) : Parcelable

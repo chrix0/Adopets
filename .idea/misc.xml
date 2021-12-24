@@ -4,8 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/all_curved_corner.xml" value="0.19583333333333333" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/border_image.xml" value="0.15260416666666668" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/drawable/shape_circle.xml" value="0.171875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/font/.xml" value="0.11041666666666666" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_adopt_info.xml" value="0.11041666666666666" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_adopt_track.xml" value="0.11041666666666666" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.22" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/activity_shop_tracker.xml" value="0.22" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/dialog_shop_checkout_address.xml" value="0.22" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/dialog_shop_checkout_phone.xml" value="0.12395833333333334" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.2875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank.xml" value="0.240625" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_blank1.xml" value="0.1" />
@@ -14,9 +23,13 @@
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.1" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.1" />
-        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/recycler_products.xml" value="0.39662447257383965" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/recycler_tracker.xml" value="0.4466666666666667" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/layout/recycler_tracker_productlist.xml" value="0.5" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
+        <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/productlist_sort.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/xml/root_preferences.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_adopt_track.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_breed_info.xml" value="0.22" />
@@ -29,24 +42,16 @@
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_personaldata.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_register.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_basket.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.33" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.5" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_checkout.xml" value="0.25" />
+        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_info_produk.xml" value="0.25" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_product_list.xml" value="0.25" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_shop_tracker.xml" value="0.25" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/activity_wiki_info.xml" value="0.15208333333333332" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/alert_checkout_address.xml" value="0.75" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/dialog_checkout_address.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/dialog_shop_checkout_address.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/dialog_shop_checkout_phone.xml" value="0.22" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.2" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.25" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/recycler_basket.xml" value="0.5" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/recycler_products.xml" value="0.1" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/recycler_tracker.xml" value="0.33" />
-        <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/layout/recycler_tracker_productlist.xml" value="0.5" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/chris/StudioProjects/Adopets/app/src/main/res/menu/productlist_sort.xml" value="0.1" />
         <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.21" />

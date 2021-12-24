@@ -16,6 +16,9 @@ object singletonData {
             "TEST",
             "Test Account",
             "testaccount@gmail.com",
+            mutableListOf(),
+            mutableListOf(),
+            "",
             mutableListOf()
         )
     )

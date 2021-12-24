@@ -20,14 +20,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:padding="5dp">
+            app:cardCornerRadius="10dp">
             <EditText
                 android:id="@+id/tbAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/grey"
                 android:lines="3"
+                android:padding="5dp"
                 android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -54,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/grey"
                 android:lines="1"
+                android:padding="5dp"
                 android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -80,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/grey"
                 android:lines="1"
+                android:padding="5dp"
                 android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -106,6 +108,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/grey"
                 android:lines="1"
+                android:padding="5dp"
                 android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
