@@ -203,8 +203,9 @@
         android:layout_height="0dp"
         android:layout_weight="18"
         android:gravity="bottom">
+
         <Button
-            android:id="@+id/addToCart"
+            android:id="@+id/checkout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#e09f12"

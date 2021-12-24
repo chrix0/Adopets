@@ -117,4 +117,12 @@
         android:text="Save"
         android:elevation="10dp"/>
 
+    <Button
+        android:id="@+id/cancelAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:elevation="10dp"
+        android:background="@color/transparent"/>
+
 </LinearLayout>

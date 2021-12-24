@@ -1,5 +1,6 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,12 +10,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_shop_checkout.*
 import kotlinx.android.synthetic.main.activity_shop_checkout.subtotal
+import kotlinx.android.synthetic.main.activity_shop_info_produk.*
 import java.util.*
 
 class shop_checkout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_checkout)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Checkout"
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         val user = singletonData.accList[singletonData.currentAccId]
         var curDate = Calendar.getInstance()
@@ -25,11 +31,15 @@ class shop_checkout : AppCompatActivity() {
         var hour = curDate.get(Calendar.HOUR_OF_DAY)
         var minute = curDate.get(Calendar.MINUTE)
 
-        var transaksi : classTransaction = classTransaction(datePurchase = "$day-${month}-${year} ${hour}:${minute}")
+        var transaksi : classTransaction = classTransaction(datePurchase = "${day}-${month}-${year} ${hour}:${minute}")
+
+        //items
+        transaksi.items = user.cartContent
 
         val promptAddress : String = "(Please tap the edit button to input your address)"
         val promptPhone : String = "(Please tap the edit button to input your phone number)"
 
+        //address cara 1
         if(user.shippingAddress.equals("")){
             alamat.setText(promptAddress)
         }
@@ -37,7 +47,7 @@ class shop_checkout : AppCompatActivity() {
             transaksi.address = user.shippingAddress
             alamat.setText(user.shippingAddress)
         }
-
+        //phoneNumber cara 1
         if(user.phoneNumber.equals("")){
             alamat.setText(promptPhone)
         }
@@ -46,6 +56,7 @@ class shop_checkout : AppCompatActivity() {
             alamat.setText(user.phoneNumber)
         }
 
+        //method
         kartu.setOnCheckedChangeListener { compoundButton, b ->
             if (b){
                 transaksi.method = kartu.text.toString()
@@ -58,6 +69,7 @@ class shop_checkout : AppCompatActivity() {
             }
         }
 
+        //address cara 2
         ubahAlamat.setOnClickListener {
             var layout = layoutInflater.inflate(R.layout.dialog_shop_checkout_address,null)
             var dialog = AlertDialog.Builder(this).apply{
@@ -71,6 +83,7 @@ class shop_checkout : AppCompatActivity() {
             var city = layout.findViewById<EditText>(R.id.tbCity)
             var postal = layout.findViewById<EditText>(R.id.tbPostal)
             var done = layout.findViewById<Button>(R.id.saveAddress)
+            var cancel = layout.findViewById<Button>(R.id.cancelAddress)
 
             done.setOnClickListener {
                 if(address.text.toString().equals("")
@@ -90,9 +103,14 @@ class shop_checkout : AppCompatActivity() {
                 }
             }
 
+            cancel.setOnClickListener {
+                creator.cancel()
+            }
+
             creator.show()
         }
 
+        //phoneNumber cara 1
         ubahTelp.setOnClickListener {
             var layout = layoutInflater.inflate(R.layout.dialog_shop_checkout_phone,null)
             var dialog = AlertDialog.Builder(this).apply{
@@ -120,13 +138,35 @@ class shop_checkout : AppCompatActivity() {
                 }
             }
 
+            cancel.setOnClickListener{
+                creator.cancel()
+            }
+
             creator.show()
 
         }
 
         var ongkos : Int = 5000
-        subtotal.setText("Rp." +singletonData.formatHarga(singletonData.subtotalInCart()))
-        ongkir.setText(singletonData.formatHarga(ongkos))
-        total.setText(singletonData.formatHarga(singletonData.totalInCart()))
+        transaksi.subTotal = singletonData.subtotalInCart()
+        subtotal.setText("Rp." +singletonData.formatHarga(transaksi.subTotal))
+
+        transaksi.shippingCost = ongkos
+        ongkir.setText(singletonData.formatHarga(transaksi.shippingCost))
+
+        transaksi.Total = singletonData.totalInCart()
+        total.setText(singletonData.formatHarga(transaksi.Total))
+
+        checkout.setOnClickListener {
+            singletonData.accList[singletonData.currentAccId].cartContent.clear()
+            var toHistory = Intent(this, shop_tracker::class.java)
+            toHistory.putExtra(CHECKOUT, transaksi)
+            //Use unless ready
+            //startActivity(toHistory)
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
