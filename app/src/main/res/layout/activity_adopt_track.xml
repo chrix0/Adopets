@@ -31,33 +31,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-        <RadioButton
-            android:layout_width="120dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="10">
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:clickable="false"
-            android:text=" 19.25 WIB"/>
+            android:src="@drawable/adopt_form_tick"
+            android:layout_weight="1"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Permintaan Adopsi telah diajukan"/>
+            android:text="19:21"
+            android:layout_weight="2"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_marginLeft="20dp"
+            android:text="Adoption request submitted"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-        <RadioButton
-            android:layout_width="120dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="10">
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:clickable="false"
-            android:text=" Waiting"/>
+            android:src="@drawable/adopt_form_pending"
+            android:layout_weight="1"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Permintaan Adopsi sedang dibaca"/>
+            android:text="Waiting"
+            android:layout_weight="2"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_marginLeft="20dp"
+            android:text="Adoption request submitted"/>
     </LinearLayout>
 
     <Button

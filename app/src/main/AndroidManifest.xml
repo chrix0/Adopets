@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adopets">
         <activity
+            android:name=".breed_form"
+            android:exported="true" />
+        <activity
             android:name=".Personaldata"
             android:exported="false" />
         <activity
@@ -59,7 +62,7 @@
             android:name=".shop_productList"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateVisible|adjustNothing"/>
+            android:windowSoftInputMode="stateVisible|adjustNothing" />
         <activity
             android:name=".shop_tracker"
             android:exported="false"
