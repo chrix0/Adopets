@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="25dp"
     android:weightSum="100"
-    tools:context=".adopt_form">
+    tools:context=".breed_form">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -121,22 +121,89 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location"
+                android:text="Pet Information"
                 android:textSize="18dp"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="10">
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
                     android:layout_height="wrap_content"
-                    android:text="House Type"/>
-                <Spinner
-                    android:id="@+id/tipeRumah"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"/>
+                    android:text="Name"/>
+                <EditText
+                    android:id="@+id/namaHewan"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Type"/>
+                <EditText
+                    android:id="@+id/jenisHewan"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Age"/>
+                <EditText
+                    android:id="@+id/umurHewan"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="Gender"/>
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Male"/>
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"/>
+                </RadioGroup>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,58 +213,12 @@
                     android:id="@+id/totalPet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="How many pets do you own?"
+                    android:hint="Reason to breed"
                     android:textAlignment="center"
                     />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/locationNewPet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Where do you want to keep your new pet?"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="8">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="6"
-                    android:lines="2"
-                    android:text="Do people in your house agreed to have pet?"/>
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/persetujuan"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="48dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="8">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="6"
-                    android:lines="2"
-                    android:text="Can you afford the basic needs of your pet"/>
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/mampu"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="48dp"
-                    />
-            </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
