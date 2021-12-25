@@ -1,5 +1,6 @@
 package com.rain.adopets
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,13 +8,17 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_shop_basket.*
 
-class recycler_shoptransaction_adapter(data : List<classTransaction>) : RecyclerView.Adapter<recycler_shoptransaction_adapter.myHolder>(){
+class recycler_shoptransaction_adapter(val context : Context, data : MutableList<classTransaction>) : RecyclerView.Adapter<recycler_shoptransaction_adapter.myHolder>(){
 
+    private lateinit var adapter : recycler_shoptransaction_productlist_adapter
     private var myData = data
     class myHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        var recycler = itemView.findViewById<RecyclerView>(R.id.produkTampil)
+        var tampil = itemView.findViewById<RecyclerView>(R.id.produkTampil)
         var count = itemView.findViewById<TextView>(R.id.jumlahItem)
         var details = itemView.findViewById<Button>(R.id.details)
         var cancel = itemView.findViewById<Button>(R.id.batal)
@@ -26,7 +31,16 @@ class recycler_shoptransaction_adapter(data : List<classTransaction>) : Recycler
     }
 
     override fun onBindViewHolder(holder: recycler_shoptransaction_adapter.myHolder, position: Int) {
+        adapter = recycler_shoptransaction_productlist_adapter(myData[position].items)
+        holder.tampil.layoutManager = LinearLayoutManager(context)
+        holder.tampil.adapter = adapter
 
+        holder.count.setText("Product count : "  + myData[position].items.size.toString())
+
+        holder.cancel.setOnClickListener {
+            myData.removeAt(position)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int = myData.size

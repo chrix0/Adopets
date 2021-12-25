@@ -8,6 +8,7 @@ import java.util.*
 
 @Parcelize
 data class classTransaction(
+    var id: Int = 0,
     var items: MutableList<classItemBasket> = mutableListOf(),
     var method: String = "",
     var address: MutableList<String> = mutableListOf(),

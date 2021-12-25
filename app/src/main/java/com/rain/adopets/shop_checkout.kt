@@ -33,8 +33,9 @@ class shop_checkout : AppCompatActivity() {
 
         var transaksi = classTransaction(datePurchase = "${day}-${month}-${year} ${hour}:${minute}")
 
+        transaksi.id = singletonData.accList[singletonData.currentAccId].transactionHistory.size
         //items
-        transaksi.items = user.cartContent
+        transaksi.items.addAll(user.cartContent)
 
         val promptAddress : String = "(Tap edit button to add address)"
         val promptPhone : String = "(Tap edit button to add phone number)"
@@ -170,9 +171,9 @@ class shop_checkout : AppCompatActivity() {
         checkout.setOnClickListener {
             singletonData.accList[singletonData.currentAccId].cartContent.clear()
             var toHistory = Intent(this, shop_tracker::class.java)
-            toHistory.putExtra(CHECKOUT, transaksi)
+            singletonData.accList[singletonData.currentAccId].transactionHistory.add(transaksi)
             //Use unless ready
-            //startActivity(toHistory)
+            startActivity(toHistory)
         }
     }
 
