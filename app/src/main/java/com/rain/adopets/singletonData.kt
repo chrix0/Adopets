@@ -264,6 +264,8 @@ object singletonData {
         return formatter.format(harga)
     }
 
+    fun formatAlamat(alamat : MutableList<String>) = "${alamat[0]}, ${alamat[1]}, ${alamat[2]}, ID ${alamat[3]}"
+
     //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
     val toJson : Gson = Gson()
 

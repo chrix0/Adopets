@@ -1,6 +1,8 @@
 package com.rain.adopets
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_shop_basket.*
 
-class recycler_shoptransaction_adapter(val context : Context, data : MutableList<classTransaction>) : RecyclerView.Adapter<recycler_shoptransaction_adapter.myHolder>(){
+class recycler_shoptransaction_adapter(val context : Context, data : MutableList<classTransaction>,
+                                        val openDetails : (classTransaction) -> Unit) : RecyclerView.Adapter<recycler_shoptransaction_adapter.myHolder>(){
 
     private lateinit var adapter : recycler_shoptransaction_productlist_adapter
     private var myData = data
@@ -38,8 +41,20 @@ class recycler_shoptransaction_adapter(val context : Context, data : MutableList
         holder.count.setText("Product count : "  + myData[position].items.size.toString())
 
         holder.cancel.setOnClickListener {
-            myData.removeAt(position)
-            notifyDataSetChanged()
+            var dialog = AlertDialog.Builder(context)
+                .setTitle("Cancel order?")
+                .setMessage("Your order will be canceled and deleted.")
+                .setPositiveButton("OK", DialogInterface.OnClickListener{ dialogInterface, i ->
+                    myData.removeAt(position)
+                    notifyDataSetChanged()
+                })
+                .setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialogInterface, i ->
+                })
+            dialog.show()
+        }
+
+        holder.details.setOnClickListener {
+            openDetails(myData[position])
         }
     }
 

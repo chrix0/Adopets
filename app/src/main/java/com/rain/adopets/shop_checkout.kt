@@ -72,13 +72,13 @@ class shop_checkout : AppCompatActivity() {
 
         //address cara 2
         ubahAlamat.setOnClickListener {
+
             var layout = layoutInflater.inflate(R.layout.dialog_shop_checkout_address,null)
             var dialog = AlertDialog.Builder(this).apply{
                 setView(layout)
                 setTitle("Change Shipping Address")
             }
             var creator = dialog.create()
-
             var address = layout.findViewById<EditText>(R.id.tbAddress)
             var province = layout.findViewById<EditText>(R.id.tbProvince)
             var city = layout.findViewById<EditText>(R.id.tbCity)
@@ -169,11 +169,19 @@ class shop_checkout : AppCompatActivity() {
         total.setText("Rp." +singletonData.formatHarga(transaksi.Total))
 
         checkout.setOnClickListener {
-            singletonData.accList[singletonData.currentAccId].cartContent.clear()
-            var toHistory = Intent(this, shop_tracker::class.java)
-            singletonData.accList[singletonData.currentAccId].transactionHistory.add(transaksi)
-            //Use unless ready
-            startActivity(toHistory)
+
+            if(transaksi.method.equals("")
+                || transaksi.address.equals("")
+                || transaksi.phoneNumber.equals("")){
+                Toast.makeText(this, "Please fill in all the data.",Toast.LENGTH_LONG).show()
+            }
+            else{
+                singletonData.accList[singletonData.currentAccId].cartContent.clear()
+                var toHistory = Intent(this, shop_tracker::class.java)
+                singletonData.accList[singletonData.currentAccId].transactionHistory.add(transaksi)
+                //Use unless ready
+                startActivity(toHistory)
+            }
         }
     }
 

@@ -58,7 +58,7 @@ class shop_basket : AppCompatActivity() {
 
         toCheckout.setOnClickListener {
             if(adapter.itemCount == 0){
-                Toast.makeText(this, "Your basket is empty!",Toast.LENGTH_LONG)
+                Toast.makeText(this, "Your basket is empty!",Toast.LENGTH_LONG).show()
             }
             else{
                 var checkout = Intent(this, shop_checkout::class.java)
