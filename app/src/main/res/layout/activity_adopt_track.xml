@@ -6,81 +6,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="25dp"
-    android:weightSum="100"
     tools:context=".adopt_track">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical|center_horizontal">
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Title"
-            android:text="Tracking"
-            android:textSize="28dp"
-            android:textAlignment="center"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adopt_form_tick"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="19:21"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_marginLeft="20dp"
+                android:text="Adoption request submitted"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adopt_form_pending"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Waiting"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_marginLeft="20dp"
+                android:text="Adoption request submitted"/>
+        </LinearLayout>
     </LinearLayout>
-    <View
-        style="@style/Divider"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/black" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:weightSum="10">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/adopt_form_tick"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="19:21"
-            android:layout_weight="2"
-            android:textAlignment="center"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:layout_marginLeft="20dp"
-            android:text="Adoption request submitted"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:weightSum="10">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/adopt_form_pending"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Waiting"
-            android:layout_weight="2"
-            android:textAlignment="center"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:layout_marginLeft="20dp"
-            android:text="Adoption request submitted"/>
-    </LinearLayout>
+
 
     <Button
         android:id="@+id/home"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="10dp"
         android:background="#e09f12"
         android:text="Home" />
 </LinearLayout>

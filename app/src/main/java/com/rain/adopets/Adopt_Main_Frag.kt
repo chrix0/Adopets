@@ -7,15 +7,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rain.adopets.singletonData.adoptList
+import kotlinx.android.synthetic.main.activity_register.view.*
 import kotlinx.android.synthetic.main.activity_shop_product_list.*
 import kotlinx.android.synthetic.main.fragment_adopt__main_.*
-
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -57,17 +58,44 @@ class Adopt_Main_Frag : Fragment() {
         )
         spinner.adapter = adapterAnimalCategory
         var data : MutableList<classAdopt> = singletonData.adoptList
+        recycleViewUpdate(view,data)
+        var newData : MutableList<classAdopt> = data
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                if (p0 != null) {
+                    newData = filter(data,p0.getItemAtPosition(p2).toString())
+                }
+                recycleViewUpdate(view,newData)
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+        return view
+    }
+    private fun recycleViewUpdate(view : View, data : MutableList<classAdopt>){
         var adoptRecycleView =view.findViewById<RecyclerView>(R.id.adoptRecycleView)
-        var MyAdapter = recycler_adopt_adapter(requireContext(),singletonData.adoptList){
+        var MyAdapter = recycler_adopt_adapter(requireContext(),data){
             var intent = Intent(requireContext(), adopt_info::class.java)
             intent.putExtra(SHOW_ADOPT_INFO,it)
             startActivity(intent)
         }
         adoptRecycleView.layoutManager = GridLayoutManager(requireContext(), 2)
         adoptRecycleView.adapter = MyAdapter
-        return view
     }
-
+    private fun filter(data : MutableList<classAdopt>, type : String) : MutableList<classAdopt>{
+        var newData : MutableList<classAdopt> = mutableListOf()
+        if(type == "All"){
+            return data
+        }
+        for(i : classAdopt in data){
+            if(i.tipe.lowercase().contains(type.lowercase())){
+                newData.add(i)
+            }
+        }
+        return newData
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
