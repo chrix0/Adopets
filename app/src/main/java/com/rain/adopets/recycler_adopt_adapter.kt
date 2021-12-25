@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
@@ -17,6 +18,7 @@ class recycler_adopt_adapter(val context : Context, data : MutableList<classAdop
 private val clickListener: (classAdopt) -> Unit) : RecyclerView.Adapter<recycler_adopt_adapter.MyHolder>(){
     private var myData = data
     class MyHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+        var tampil = itemView.findViewById<RecyclerView>(R.id.adoptRecycleView)
         var petPhoto = itemView.findViewById<ImageView>(R.id.photo)
         var petName = itemView.findViewById<TextView>(R.id.name)
         var petGender = itemView.findViewById<TextView>(R.id.gender)

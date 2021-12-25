@@ -226,6 +226,33 @@ object singletonData {
             "Medan, Indonesia",
             "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
             "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
+        ),
+        classAdopt(
+            2,
+            "Lord Umam",
+            "Ginger Cat",
+            "Male",
+            "Medan, Indonesia",
+            "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
+        ),
+        classAdopt(
+            3,
+            "Lord Umam",
+            "Ginger Cat",
+            "Male",
+            "Medan, Indonesia",
+            "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
+        ),
+        classAdopt(
+            4,
+            "Lord Umam",
+            "Ginger Cat",
+            "Male",
+            "Medan, Indonesia",
+            "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
         )
     )
     var currentAdoptId : Int = 0

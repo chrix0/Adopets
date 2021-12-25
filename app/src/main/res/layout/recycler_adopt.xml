@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="wrap_content"
+<LinearLayout
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="180dp"
         android:layout_height="275dp"
         android:background="#ffb845"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         android:layout_marginRight="10dp"
         android:gravity="center_horizontal">
@@ -16,7 +21,8 @@
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/test_dog" />
+            android:src="@drawable/test_dog"
+            android:layout_margin="5dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +31,7 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="15dp"
+                android:layout_width="18dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/adopt_name" />
@@ -47,7 +53,7 @@
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/genderIcon"
-                android:layout_width="15dp"
+                android:layout_width="18dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/adopt_gender"/>
@@ -69,7 +75,7 @@
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/locationIcon"
-                android:layout_width="15dp"
+                android:layout_width="18dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/adopt_location"/>

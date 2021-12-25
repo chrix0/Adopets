@@ -9,9 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rain.adopets.singletonData.adoptList
+import kotlinx.android.synthetic.main.activity_shop_product_list.*
 import kotlinx.android.synthetic.main.fragment_adopt__main_.*
 
 private const val ARG_PARAM1 = "param1"
@@ -61,8 +63,8 @@ class Adopt_Main_Frag : Fragment() {
             intent.putExtra(SHOW_ADOPT_INFO,it)
             startActivity(intent)
         }
+        adoptRecycleView.layoutManager = GridLayoutManager(requireContext(), 2)
         adoptRecycleView.adapter = MyAdapter
-        adoptRecycleView.layoutManager = LinearLayoutManager(requireContext())
         return view
     }
 
