@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.activity_shop_product_list.*
 import kotlinx.android.synthetic.main.activity_shop_tracker.*
 import org.w3c.dom.Text
@@ -63,6 +64,7 @@ class shop_tracker : AppCompatActivity() {
 
         returnShop.setOnClickListener {
             var intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(RETURN_LAST_TAB, "SHOP")
             startActivity(intent)
         }
     }

@@ -4,12 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import io.github.yavski.fabspeeddial.FabSpeedDial
+import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter
 import kotlinx.android.synthetic.main.fragment_shop__main_.*
 import java.io.Serializable
 
@@ -100,6 +103,7 @@ class Shop_Main_Frag : Fragment() {
             more.putExtra(CHANGE_TITLE, "Pet Utensil")
             startActivity(more)
         }
+
         moreOutfit.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petOutfitList as ArrayList<classProduk>)
@@ -107,11 +111,39 @@ class Shop_Main_Frag : Fragment() {
             startActivity(more)
         }
 
+        val speedDial : FabSpeedDial = v.findViewById(R.id.speedDial)
+
+        speedDial.setMenuListener(object : SimpleMenuListenerAdapter() {
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                when(menuItem.itemId){
+                    R.id.basket -> {
+                        var keBasket = Intent(requireContext(), shop_basket::class.java)
+                        startActivity(keBasket)
+                    }
+                    R.id.history -> {
+                        var keHistory = Intent(requireContext(), shop_tracker::class.java)
+                        startActivity(keHistory)
+                    }
+                }
+                return false
+            }
+        })
+        /*
+        toHistory.setMenuListener(object : SimpleMenuListenerAdapter() {
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                var keHistory = Intent(requireContext(), shop_tracker::class.java)
+                startActivity(keHistory)
+                return false
+            }
+        })*/
+
+        /*
         val fab = v.findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fabBasket)
         fab.setOnClickListener {
             var keBasket = Intent(requireContext(), shop_basket::class.java)
             startActivity(keBasket)
         }
+        */
         return v
     }
 

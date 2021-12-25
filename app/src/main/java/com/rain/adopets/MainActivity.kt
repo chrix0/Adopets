@@ -49,5 +49,12 @@ class MainActivity : AppCompatActivity() {
                     false
             }
         }
+
+        var intentData = intent
+        when(intentData.hasExtra(RETURN_LAST_TAB)){
+            (intentData.getStringExtra(RETURN_LAST_TAB).equals("SHOP")) -> {
+                navBottom.selectedItemId = R.id.shop_Main_Frag
+            }
+        }
     }
 }

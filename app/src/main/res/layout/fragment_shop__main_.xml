@@ -140,13 +140,16 @@
         </RelativeLayout>
     </ScrollView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabBasket"
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/speedDial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:contentDescription="Basket"
-        android:src="@drawable/shop_fab_basket"/>
+        android:layout_gravity="bottom|end"
+        app:fabGravity="bottom_end"
+        app:fabMenu="@menu/fab_expand"
+        app:miniFabBackgroundTint="@color/sandyBrown"
+        app:miniFabDrawableTint="?attr/colorPrimaryDark"
+        app:miniFabTitleTextColor="?attr/colorPrimaryDark"
+        android:layout_margin="16dp"/>
 
 </FrameLayout>
