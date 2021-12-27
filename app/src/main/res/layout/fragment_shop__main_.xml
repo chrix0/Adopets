@@ -78,13 +78,14 @@
                     android:id="@+id/scrollUtensils"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:layout_marginTop="20dp"
                     android:layout_below="@id/title_utensils"
+                    android:layout_marginTop="20dp"
                     android:scrollbars="horizontal">
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/utensilsList"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </ScrollView>
 
             </RelativeLayout>
@@ -145,11 +146,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        app:fabDrawable="@drawable/shop_fab_basket"
+        app:fabDrawableTint="@color/black"
         app:fabGravity="bottom_end"
         app:fabMenu="@menu/fab_expand"
         app:miniFabBackgroundTint="@color/sandyBrown"
         app:miniFabDrawableTint="?attr/colorPrimaryDark"
         app:miniFabTitleTextColor="?attr/colorPrimaryDark"
-        android:layout_margin="16dp"/>
-
+        android:layout_margin="16dp"
+        app:touchGuard="true"/>
 </FrameLayout>

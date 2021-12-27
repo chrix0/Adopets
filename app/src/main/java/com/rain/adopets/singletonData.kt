@@ -1,6 +1,12 @@
 package com.rain.adopets
 
+import android.graphics.Bitmap
+import androidx.palette.graphics.Palette
 import com.google.gson.Gson
+import dev.jorgecastillo.androidcolorx.library.HEXColor
+import dev.jorgecastillo.androidcolorx.library.RGBColor
+import dev.jorgecastillo.androidcolorx.library.asHex
+import dev.jorgecastillo.androidcolorx.library.asRgb
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
@@ -216,6 +222,10 @@ object singletonData {
             "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
         )
     )
+
+    //Outfit Analyzer (Untuk memudahkan resetting aja)
+    lateinit var OASession : classOASession
+
     // Adopt
     var adoptList : MutableList<classAdopt> = mutableListOf(
         classAdopt(
@@ -269,5 +279,16 @@ object singletonData {
     //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
     val toJson : Gson = Gson()
 
+    //Analyzer. Sering dipake return nilai RGB.
+    /*
+    fun colorCheck(pic : Bitmap) : Int{
+        // Fungsi untuk mengenerate palette
+        fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).maximumColorCount(8).generate()
+        var color = createPaletteSync(pic)
+
+        var dominant = color.dominantSwatch!!.rgb
+        return dominant
+    }
+    */
 
 }

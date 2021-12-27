@@ -128,11 +128,18 @@ class Shop_Main_Frag : Fragment() {
                 return false
             }
         })
+
+        val analyzer = v.findViewById<Button>(R.id.analyzer)
+        analyzer.setOnClickListener {
+            var intent = Intent(requireContext(), OA_petPic::class.java)
+            startActivity(intent)
+        }
+
         /*
         toHistory.setMenuListener(object : SimpleMenuListenerAdapter() {
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 var keHistory = Intent(requireContext(), shop_tracker::class.java)
-                startActivity(keHistory)
+                startActivi\\zty(keHistory)
                 return false
             }
         })*/

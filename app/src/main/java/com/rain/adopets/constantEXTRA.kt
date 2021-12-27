@@ -7,3 +7,5 @@ const val ADD_TO_CART = "com.rain.adopets.CART"
 const val CHECKOUT = "com.rain.adopets.CHECKOUT"
 const val SHOW_ADOPT_INFO = "com.rain.adopets.ADOPT_INFO"
 const val RETURN_LAST_TAB = "com.rain.adopets.LAST_TAB"
+const val REQUEST_CAMERA = 111
+const val REQUEST_GALLERY = 112

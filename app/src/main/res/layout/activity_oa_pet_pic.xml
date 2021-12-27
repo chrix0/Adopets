@@ -74,10 +74,17 @@
             android:layout_height="wrap_content"
             android:text="Detected color"
             android:gravity="center"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@color/grey"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp">
+            <View
+                android:id="@+id/colorShow"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/grey"/>
+        </androidx.cardview.widget.CardView>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
