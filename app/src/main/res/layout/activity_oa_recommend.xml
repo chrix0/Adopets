@@ -1,66 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".oa_recommend"
-    android:padding="20dp"
-    android:orientation="vertical"
-    android:weightSum="100">
+    tools:context=".oa_recommend">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:text="Here is our recommedation based on your pet's color." />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:text="Analogous"/>
-        <TextView
+            android:text="Here is our recommedation based on your pet's color." />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="penjelasan Analogous"></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:text="Compliment"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="penjelasan Compliment"></TextView>
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="33"
-        android:gravity="bottom">
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:text="Analogous"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"
+                android:text="Analogous colors are groups of three colors that are next to each other on the color wheel, and a tertiary. Red, orange, and red-orange are examples."></TextView>
+            <ScrollView
+                android:id="@+id/scrollAnalog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
 
-        <Button
-            android:id="@+id/tryAgain"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/itemAnalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Try again" />
-        <Button
-            android:id="@+id/backToShop"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:text="Compliment"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"
+                android:text="Complementary colors are pairs of colors which, when combined or mixed, cancel each other out."></TextView>
+            <ScrollView
+                android:id="@+id/scrollComp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/itemComp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Return to shop"
-            android:background="@color/transparent"
-            android:layout_below="@id/tryAgain" />
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp">
+
+            <Button
+                android:id="@+id/tryAgain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Try again" />
+
+            <Button
+                android:id="@+id/backToShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Return to shop" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
