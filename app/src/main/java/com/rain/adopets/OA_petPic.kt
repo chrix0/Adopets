@@ -11,6 +11,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.palette.graphics.Palette
@@ -21,7 +22,7 @@ import kotlinx.android.synthetic.main.recycler_tracker_productlist.*
 
 class OA_petPic : AppCompatActivity() {
 
-    fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).maximumColorCount(8).generate()
+    fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).maximumColorCount(16).generate()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,7 @@ class OA_petPic : AppCompatActivity() {
         }
 
         toStep2.setOnClickListener {
-            if(singletonData.OASession.petHex == null){
+            if(singletonData.OASession.insertedPet){
                 var intent = Intent(this, OA_outfitPic::class.java)
                 startActivity(intent)
             }
@@ -68,13 +69,13 @@ class OA_petPic : AppCompatActivity() {
             var bitmap = thumbnail?.get("data") as Bitmap
             singletonData.OASession.petPic = bitmap
             photo.setImageBitmap(bitmap)
-            /*
+
             var color = createPaletteSync(bitmap)
             var dominant = color.dominantSwatch!!.rgb
 
-            showColor.setBackgroundColor(dominant)
+            colorShow.setBackgroundColor(dominant)
             singletonData.OASession.petHex = dominant.asHex()
-             */
+            singletonData.OASession.insertedPet = true
         }
 
         if(requestCode == REQUEST_GALLERY && data != null && resultCode == Activity.RESULT_OK){
@@ -91,14 +92,14 @@ class OA_petPic : AppCompatActivity() {
                 }
                 singletonData.OASession.petPic = bitmap
                 photo.setImageBitmap(bitmap)
-                /*
+
                 var color = createPaletteSync(bitmap)
                 var dominant = color.dominantSwatch!!.rgb
 
-                showColor.setBackgroundColor(dominant)
+                colorShow.setBackgroundColor(dominant)
                 singletonData.OASession.petHex = dominant.asHex()
 
-                 */
+                singletonData.OASession.insertedPet = true
             }
         }
     }

@@ -40,7 +40,7 @@ class OA_outfitPic : AppCompatActivity() {
         }
 
         startAnalysis.setOnClickListener {
-            if(singletonData.OASession.outfitHex == null) {
+            if(singletonData.OASession.insertedOutfit) {
                 var intent = Intent(this, OA_result::class.java)
                 startActivity(intent)
             }
@@ -71,8 +71,10 @@ class OA_outfitPic : AppCompatActivity() {
             var color = createPaletteSync(bitmap)
             var dominant = color.dominantSwatch!!.rgb
 
-            showColor.setBackgroundColor(dominant)
+            colorShow2.setBackgroundColor(dominant)
             singletonData.OASession.outfitHex = dominant.asHex()
+
+            singletonData.OASession.insertedOutfit = true
         }
 
         if(requestCode == REQUEST_GALLERY && data != null && resultCode == Activity.RESULT_OK){
@@ -93,8 +95,10 @@ class OA_outfitPic : AppCompatActivity() {
                 var color = createPaletteSync(bitmap)
                 var dominant = color.dominantSwatch!!.rgb
 
-                showColor.setBackgroundColor(dominant)
+                colorShow2.setBackgroundColor(dominant)
                 singletonData.OASession.outfitHex = dominant.asHex()
+
+                singletonData.OASession.insertedOutfit = true
             }
         }
     }

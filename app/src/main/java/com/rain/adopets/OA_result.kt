@@ -38,26 +38,47 @@ class OA_result : AppCompatActivity() {
             var g = Math.abs(rgb1.green - rgb2.green)
             var b = Math.abs(rgb1.blue - rgb2.blue)
 
-            var pR = (r / 255)
-            var pG = (g / 255)
-            var pB = (b / 255)
+            var pR : Float= (r / 255f)
+            var pG : Float= (g / 255f)
+            var pB : Float= (b / 255f)
 
-            var similiarity : Int = 100 - ((pR + pG + pB) / 3 * 100)
+            var similiarity : Float = 100f - ((pR + pG + pB) / 3 * 100)
 
             if(similiarity >= 85){
                 Over85 = true
             }
-            singletonData.OASession.similiar.add(similiarity)
+            singletonData.OASession.similiar.add("%.2f".format(similiarity).toFloat())
         }
 
         var sim =  singletonData.OASession.similiar
 
-        color1.setBackgroundColor(Color.parseColor("${rec[0]}"))
-        color2.setBackgroundColor(Color.parseColor("${rec[1]}"))
-        color3.setBackgroundColor(Color.parseColor("${rec[2]}"))
-        color1.text = "${sim[0].toString()}"
-        color2.text = "${sim[1].toString()}"
-        color3.text = "${sim[2].toString()}"
+        var c1 = Color.parseColor("${rec[0]}")
+        var c2 = Color.parseColor("${rec[1]}")
+        var c3 = Color.parseColor("${rec[2]}")
+        color1.setBackgroundColor(c1)
+        color2.setBackgroundColor(c2)
+        color3.setBackgroundColor(c3)
+        color1.text = "${sim[0]}%"
+        color2.text = "${sim[1]}%"
+        color3.text = "${sim[2]}%"
+
+        color1.setTextColor(if(c1.isDark()){
+            Color.WHITE
+        }else{
+            Color.BLACK
+        })
+
+        color2.setTextColor(if(c2.isDark()){
+            Color.WHITE
+        }else{
+            Color.BLACK
+        })
+
+        color3.setTextColor(if(c3.isDark()){
+            Color.WHITE
+        }else{
+            Color.BLACK
+        })
 
         when(Over85){
             true ->{
