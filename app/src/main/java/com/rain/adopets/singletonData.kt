@@ -225,6 +225,7 @@ object singletonData {
 
     //Outfit Analyzer (Untuk memudahkan resetting aja)
     lateinit var OASession : classOASession
+    var allImageProcessed = false
 
     // Adopt
     var adoptList : MutableList<classAdopt> = mutableListOf(
@@ -290,5 +291,4 @@ object singletonData {
         return dominant
     }
     */
-
 }

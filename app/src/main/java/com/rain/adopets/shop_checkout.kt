@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_shop_checkout.*
 import kotlinx.android.synthetic.main.activity_shop_checkout.subtotal
 import kotlinx.android.synthetic.main.activity_shop_info_produk.*
+import java.text.DecimalFormat
 import java.util.*
 
 class shop_checkout : AppCompatActivity() {
@@ -31,7 +32,7 @@ class shop_checkout : AppCompatActivity() {
         var hour = curDate.get(Calendar.HOUR_OF_DAY)
         var minute = curDate.get(Calendar.MINUTE)
 
-        var transaksi = classTransaction(datePurchase = "${day}-${month}-${year} ${hour}:${minute}")
+        var transaksi = classTransaction(datePurchase = "${day}-${month}-${year} ${DecimalFormat("00").format(hour)}:${DecimalFormat("00").format(minute)}")
 
         transaksi.id = singletonData.accList[singletonData.currentAccId].transactionHistory.size
         //items
