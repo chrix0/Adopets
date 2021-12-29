@@ -139,7 +139,7 @@ class Shop_Main_Frag : Fragment() {
         toHistory.setMenuListener(object : SimpleMenuListenerAdapter() {
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 var keHistory = Intent(requireContext(), shop_tracker::class.java)
-                startActivi\\zty(keHistory)
+                startActivity(keHistory)
                 return false
             }
         })*/

@@ -1,5 +1,8 @@
 package com.rain.adopets
 
+import android.app.ProgressDialog
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.squareup.picasso.Target
@@ -8,53 +11,92 @@ import android.graphics.drawable.Drawable
 import com.squareup.picasso.Picasso
 
 import android.graphics.Bitmap
+import android.os.AsyncTask
 import androidx.palette.graphics.Palette
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.picasso.Picasso.LoadedFrom
 import dev.jorgecastillo.androidcolorx.library.RGBColor
 import dev.jorgecastillo.androidcolorx.library.asRgb
+import kotlinx.android.synthetic.main.activity_oa_recommend.*
 import java.lang.Exception
 
 
 class oa_recommend : AppCompatActivity() {
+    // Need fix:
+    // - Add async or find better solution
+    // - Purchase history, time msh blm dalam bentuk 00:00
+    // - Fix ukuran gambar di recycler products
 
-    public lateinit var urlBitmap : Bitmap
+    var urlBitmap : Bitmap? = null
     var petColor = singletonData.OASession.petHex.asRgb()
+
+    var firstnAnalog = mutableListOf<classProduk>()
+    var firstnComplement = mutableListOf<classProduk>()
+
+    lateinit var context : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oa_recommend)
+
+        firstnAnalog = checkColor(singletonData.OASession.rec[0].asRgb())
+        firstnComplement = mutableListOf()
+        firstnComplement.addAll(checkColor(singletonData.OASession.rec[1].asRgb()))
+        firstnComplement.removeAll(checkColor(singletonData.OASession.rec[2].asRgb()))
+        firstnComplement.addAll(checkColor(singletonData.OASession.rec[2].asRgb()))
+
+        var analog = recycler_products_adapter(firstnAnalog){
+            val info = Intent(this, shop_infoProduk::class.java)
+            info.putExtra(SHOW_PRODUCT_INFO, it)
+            info.putExtra(CHANGE_TITLE,"Product Info")
+            startActivity(info)
+        }
+        itemAnalog.adapter = analog
+        itemAnalog.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL, false)
+
+        var comp = recycler_products_adapter(firstnComplement){
+            val info = Intent(this, shop_infoProduk::class.java)
+            info.putExtra(SHOW_PRODUCT_INFO, it)
+            info.putExtra(CHANGE_TITLE,"Product Info")
+            startActivity(info)
+        }
+        itemComp.adapter = comp
+        itemComp.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL, false)
     }
 
     fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).maximumColorCount(16).generate()
 
-    fun checkColor(color : Int) : MutableList<classProduk> {
+    fun checkColor(color : RGBColor) : MutableList<classProduk> {
         var temp : MutableList<classProduk> = mutableListOf()
 
         for(i : classProduk in singletonData.petOutfitList){
-            lateinit var takeBitmap: Bitmap
-
+            var loaded = false
             var target = object : Target {
                 override fun onBitmapLoaded(bitmap: Bitmap, from: LoadedFrom) {
                     urlBitmap = bitmap
+                    loaded = true
                 }
 
                 override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
                 }
-
-                override fun onPrepareLoad(placeHolderDrawable: Drawable) {
+                //Parameter placeholdernya perlu diberi null safety.. karena ketika dijalankan placeholdernya dicari ..
+                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
                 }
             }
 
             Picasso.get().load(i.urlGambarProduk).into(target)
+            Thread.sleep(1000)
+            if(loaded){
+                var color = createPaletteSync(urlBitmap!!)
+                var dominantItemColor = color.dominantSwatch!!.rgb.asRgb()
 
-            var color = createPaletteSync(urlBitmap)
-            var dominantItemColor = color.dominantSwatch!!.rgb.asRgb()
-
-            if (calculate(petColor, dominantItemColor)){
-                temp.add(i)
+                if (calculate(petColor, dominantItemColor)){
+                    temp.add(i)
+                }
             }
         }
-
         return temp
     }
 
@@ -69,7 +111,7 @@ class oa_recommend : AppCompatActivity() {
 
         var similiarity : Float = 100f - ((pR + pG + pB) / 3 * 100)
 
-        if(similiarity >= 85){
+        if(similiarity >= 75){
             return true
         }
         return false

@@ -84,12 +84,22 @@ class OA_petPic : AppCompatActivity() {
             if (null != selectedImageUri) {
                 //Kode disesuaikan dengan versi SDK yang digunakan
                 //Versi sebelum Android Pie mungkin tidak bisa menjalankan ImageDecoder
+
                 bitmap = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
                     ImageDecoder.decodeBitmap(ImageDecoder.createSource(this.contentResolver, selectedImageUri))
                 }
                 else{
                     MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImageUri)
                 }
+
+                //Menggunakan config RGBA_F16 atau ARGB_8888 untuk menggantikan HARDWARE config.
+                //HARDWARE config sering kali buat crash..
+                var bitmap = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    bitmap.copy(Bitmap.Config.RGBA_F16, true)
+                } else {
+                    bitmap.copy(Bitmap.Config.ARGB_8888, true)
+                }
+
                 singletonData.OASession.petPic = bitmap
                 photo.setImageBitmap(bitmap)
 

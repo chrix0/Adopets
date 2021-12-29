@@ -34,7 +34,6 @@ class recycler_products_adapter(data : List<classProduk>,
         holder.nama.setText(myData.get(position).namaProduk)
         holder.harga.setText("Rp." + singletonData.formatHarga(myData.get(position).hargaProduk))
         Picasso.get().load(myData[position].urlGambarProduk).into(holder.gambar)
-
         holder.itemView.setOnClickListener{ v ->
             clickListener(myData[position])
         }

@@ -1,5 +1,6 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -84,7 +85,7 @@ class OA_result : AppCompatActivity() {
             true ->{
                 resultTitle.text = "PASS"
                 resultTitle.setTextColor(Color.GREEN)
-                resultExplain.text = "Your color choice of your pet's outfit looks good! You can check for more outfits by pressing the button below."
+                resultExplain.text = "Your color choice of your pet's outfit is looking good! You can check for more outfits by pressing the button below."
             }
             else ->{
                 resultTitle.text = "FAULTY"
@@ -92,6 +93,12 @@ class OA_result : AppCompatActivity() {
                 resultExplain.text = "Your color choice of your pet's outfit seems to be unsuitable. You can follow one of the recommended colors or tap the button below to check for outfits which are suitable for yout pet! "
             }
         }
+
+        toRekomendasi.setOnClickListener {
+            var intent = Intent(this, oa_recommend::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

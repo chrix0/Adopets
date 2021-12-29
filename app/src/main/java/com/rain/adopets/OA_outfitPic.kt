@@ -89,6 +89,13 @@ class OA_outfitPic : AppCompatActivity() {
                 else{
                     MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImageUri)
                 }
+
+                var bitmap = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    bitmap.copy(Bitmap.Config.RGBA_F16, true)
+                } else {
+                    bitmap.copy(Bitmap.Config.ARGB_8888, true)
+                }
+
                 singletonData.OASession.outiftPic = bitmap
                 photo.setImageBitmap(bitmap)
 

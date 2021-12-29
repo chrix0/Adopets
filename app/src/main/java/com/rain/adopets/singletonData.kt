@@ -188,38 +188,38 @@ object singletonData {
         //Add stuff
         classProduk(
             20,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete`` adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Christmas Scarf",
+            45000,
+            "https://cdn.shopify.com/s/files/1/0509/9919/7892/products/ChristmasScarf.jpg?v=1637673538",
+            "Make sure your beloved is warm this season with the Christmas Scarf. Worn like a collar, around neck. Collar-like, knit band slides over dog's head, then wrap attached knit scarf around and tie for ultimate winter look. Great for Gifts and Valentine's and Christmas!",
         ),
         classProduk(
             21,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Snowflake Neckerchief - Large",
+            160000,
+            "https://cdn.shopify.com/s/files/1/0509/9919/7892/products/SnowflakeNeckerchief.jpg?v=1637735272",
+            "Our classic christmas themed tie-on bandanas are the perfect accessory for your dapper dog",
         ),
         classProduk(
             22,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Sea Green Brocade Sherwani - Small",
+            380000,
+            "https://cdn.shopify.com/s/files/1/0509/9919/7892/products/SeaGreenBrocadeSherwani1.jpg?v=1628937533",
+            "Looking for gorgeous Indian wear for pets for special occasions? Our stylish yet comfortable Sherwani for dogs is 100% custom-made as per your pet’s needs and your preferences. If you’re looking for dog dresses and occasion wear for dogs, a sherwani like this will be a perfect choice."
         ),
         classProduk(
             23,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Peach Brocade Sherwani - X-Large",
+            380000,
+            "https://cdn.shopify.com/s/files/1/0509/9919/7892/products/PeachBrocadeSherwani.jpg?v=1628937612",
+            "Looking for gorgeous Indian wear for pets for special occasions? Our stylish yet comfortable Sherwani for dogs is 100% custom-made as per your pet’s needs and your preferences. If you’re looking for dog dresses and occasion wear for dogs, a sherwani like this will be a perfect choice."
         ),
         classProduk(
             24,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Blue Polka Dot Cape - Medium",
+            100000,
+            "https://cdn.shopify.com/s/files/1/0509/9919/7892/products/BluePolkadotCape.jpg?v=1625651398",
+            "Stylish polka dot cape for your cute pet. Make her feel special with the cute polka dot cape. The cape is made with comfortable fabric.",
         )
     )
 
