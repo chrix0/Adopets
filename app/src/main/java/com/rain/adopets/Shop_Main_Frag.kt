@@ -94,20 +94,20 @@ class Shop_Main_Frag : Fragment() {
         moreFood.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petFoodList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Food")
+            more.putExtra(CHANGE_TITLE, "Pet Foods")
             startActivity(more)
         }
         moreUtensils.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petUtensilList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Utensil")
+            more.putExtra(CHANGE_TITLE, "Pet Tools and Supplies")
             startActivity(more)
         }
 
         moreOutfit.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petOutfitList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Outfit")
+            more.putExtra(CHANGE_TITLE, "Pet Outfits")
             startActivity(more)
         }
 

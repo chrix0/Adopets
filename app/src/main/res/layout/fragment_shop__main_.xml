@@ -63,7 +63,7 @@
                     android:id="@+id/title_utensils"
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
-                    android:text="Pet Utensils"
+                    android:text="Pet Tools and Supplies"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
 
