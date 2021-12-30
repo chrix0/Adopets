@@ -1,6 +1,7 @@
 package com.rain.adopets
 
 import android.graphics.Bitmap
+import android.media.ThumbnailUtils
 import androidx.palette.graphics.Palette
 import com.google.gson.Gson
 import dev.jorgecastillo.androidcolorx.library.HEXColor
@@ -280,15 +281,16 @@ object singletonData {
     //Ini dipakai ketika mau ubah objek jadi JSON biar pengiriman data ke activity lain lebih gampang.
     val toJson : Gson = Gson()
 
-    //Analyzer. Sering dipake return nilai RGB.
-    /*
-    fun colorCheck(pic : Bitmap) : Int{
-        // Fungsi untuk mengenerate palette
-        fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).maximumColorCount(8).generate()
-        var color = createPaletteSync(pic)
+    //Image Cropper. Utk OA
+    fun cropThis(pic : Bitmap) : Bitmap{
+        var w = pic.width
+        var h = pic.height
 
-        var dominant = color.dominantSwatch!!.rgb
-        return dominant
+        var wResult = w/2
+        var hResult = h/2
+
+        var dimension = Math.min(w/2, h/2)
+
+        return ThumbnailUtils.extractThumbnail(pic, dimension, dimension)
     }
-    */
 }

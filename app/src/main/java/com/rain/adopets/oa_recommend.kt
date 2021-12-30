@@ -18,30 +18,36 @@ import com.squareup.picasso.Picasso.LoadedFrom
 import dev.jorgecastillo.androidcolorx.library.RGBColor
 import dev.jorgecastillo.androidcolorx.library.asRgb
 import kotlinx.android.synthetic.main.activity_oa_recommend.*
+import kotlinx.android.synthetic.main.recycler_tracker_productlist.*
 import java.lang.Exception
 import kotlinx.coroutines.*
 
 @Suppress("DEPRECATION")
 class oa_recommend : AppCompatActivity() {
-    // Need fix:
-    // - Add async or find better solution ok
-    // - Purchase history, time msh blm dalam bentuk 00:00 ok
-    // - Fix ukuran gambar di recycler products ok
-
-    var petColor = singletonData.OASession.petHex.asRgb()
-
     var firstnAnalog = mutableListOf<classProduk>()
     var firstnComplement = mutableListOf<classProduk>()
 
     lateinit var context : Context
 
-    @Suppress("DEPRECATED")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_oa_recommend)
-
         context = this
         Async().execute()
+        setContentView(R.layout.activity_oa_recommend)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Recommendation"
+
+        tryAgain.setOnClickListener {
+            var intent = Intent(this, OA_petPic::class.java)
+            startActivity(intent)
+        }
+
+        backToShop.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(RETURN_LAST_TAB, "SHOP")
+            startActivity(intent)
+        }
     }
 
     inner class Async : AsyncTask<Void,Void,Unit>(){
@@ -101,77 +107,65 @@ class oa_recommend : AppCompatActivity() {
 
     fun checkColor(color : RGBColor) : MutableList<classProduk> {
         var temp : MutableList<classProduk> = mutableListOf()
-        var loaded = true
 
         for(i : classProduk in singletonData.petOutfitList){
-            /*
-            var loaded = false
-            var target = object : Target {
-                override fun onBitmapLoaded(bitmap: Bitmap, from: LoadedFrom) {
-                    urlBitmap = bitmap
-                    loaded = true
-                }
+            var colorPalette = createPaletteSync(i.savedBitmap!!)
+            var dominantItemColor = colorPalette.dominantSwatch!!.rgb.asRgb()
 
-                override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                }
-                //Parameter placeholdernya perlu diberi null safety.. karena ketika dijalankan placeholdernya dicari ..
-                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-                }
-            }
-
-            Picasso.get().load(i.urlGambarProduk).into(target)
-            Thread.sleep(1000)
-         */
-             /*
-            if(loaded){
-                var color = createPaletteSync(urlBitmap!!)
-                var dominantItemColor = color.dominantSwatch!!.rgb.asRgb()
-
-                if (judge(petColor, dominantItemColor)){
-                    temp.add(i)
-                }
-            }
-              */
-            if(loaded){
-                var color = createPaletteSync(i.savedBitmap!!)
-                var dominantItemColor = color.dominantSwatch!!.rgb.asRgb()
-
-                if (judge(petColor, dominantItemColor)){
-                    temp.add(i)
-                }
+            if (judge(color, dominantItemColor)){
+                temp.add(i)
             }
         }
         return temp
     }
 
     fun judge(rgb1 : RGBColor, rgb2 : RGBColor) : Boolean{
+        //Metode yang digunakan untuk menganalisis hanya untuk mengukur kemiripan dari nilai RGB saja,
+        //jadi ada kemungkinan produk dengan warna yang berbeda akan muncul di rekomendasi.
+        var showColor1 = colorFilter(rgb1)
+        var showColor2 = colorFilter(rgb2)
 
-        var focus = ""
-        var rgbof2 = mutableListOf<Int>(rgb2.red, rgb2.green, rgb2.blue)
-        var copy = rgbof2.sortedBy { it }
-        var maxIndex = rgbof2.indexOf(copy[0])
+        //Untuk mengatasi hal tersebut, saya mencari channel warna dengan nilai maksimum untuk kedua
+        //gambar untuk menentukan jenis warna. Jika keduanya sejenis, proses analisis bisa dilakukan.
+        if(!showColor1.equals(showColor2)){
+            var r = Math.abs(rgb1.red - rgb2.red)
+            var g = Math.abs(rgb1.green - rgb2.green)
+            var b = Math.abs(rgb1.blue - rgb2.blue)
 
-        focus = when(maxIndex){
+            var pR : Float= (r / 255f)
+            var pG : Float= (g / 255f)
+            var pB : Float= (b / 255f)
+
+            var similiarity : Float = 100f - ((pR + pG + pB) / 3 * 100)
+
+            if(similiarity >= 80){
+                return true
+            }
+            return false
+        }
+        //Selain itu tidak akan diproses
+        return false
+    }
+
+    fun colorFilter(rgb : RGBColor) : String{
+        var maxIndex : Int = 0
+        var split = mutableListOf<Int>(rgb.red, rgb.green, rgb.blue)
+        for((idx, elem) in split.withIndex()){
+            if(split[maxIndex] <= elem){
+                maxIndex = idx
+            }
+        }
+        //Kelemahannya untuk warna hitam atau putih mungkin kurang cocok
+        var conclusion = when(maxIndex){
             0 -> "RED"
             1 -> "GREEN"
             2 -> "BLUE"
             else -> "ANY"
         }
+        return conclusion
+    }
 
-        var r = Math.abs(rgb1.red - rgb2.red)
-        var g = Math.abs(rgb1.green - rgb2.green)
-        var b = Math.abs(rgb1.blue - rgb2.blue)
+    override fun onBackPressed() {
 
-        var pR : Float= (r / 255f)
-        var pG : Float= (g / 255f)
-        var pB : Float= (b / 255f)
-
-        var similiarity : Float = 100f - ((pR + pG + pB) / 3 * 100)
-
-        if(similiarity >= 80){
-            return true
-        }
-
-        return false
     }
 }

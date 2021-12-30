@@ -31,7 +31,6 @@ class OA_petPic : AppCompatActivity() {
 
         val actionbar = supportActionBar
         actionbar!!.title = "Pet Outfit Analyzer"
-        actionbar.setDisplayHomeAsUpEnabled(true)
 
         openCamera.setOnClickListener {
             displayCam()
@@ -67,6 +66,8 @@ class OA_petPic : AppCompatActivity() {
         if(requestCode == REQUEST_CAMERA && resultCode == Activity.RESULT_OK && data != null ){
             var thumbnail = data.extras
             var bitmap = thumbnail?.get("data") as Bitmap
+            bitmap = singletonData.cropThis(bitmap)
+
             singletonData.OASession.petPic = bitmap
             photo.setImageBitmap(bitmap)
 
@@ -99,6 +100,8 @@ class OA_petPic : AppCompatActivity() {
                 } else {
                     bitmap.copy(Bitmap.Config.ARGB_8888, true)
                 }
+
+                bitmap = singletonData.cropThis(bitmap)
 
                 singletonData.OASession.petPic = bitmap
                 photo.setImageBitmap(bitmap)

@@ -19,22 +19,9 @@ class classProduk(var idProduk: Int,
     var savedBitmap : Bitmap? = null
 
     fun getBitmapBackground() : Bitmap{
-        /*
-        var target = object : Target {
-              override fun onBitmapLoaded(bitmap: Bitmap, from: Picasso.LoadedFrom) {
-                  urlBitmap = bitmap
-              }
-
-              override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-              }
-              //Parameter placeholdernya perlu diberi null safety.. karena ketika dijalankan placeholdernya dicari ..
-              override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-              }
-        }
-        Picasso.get().load(urlGambarProduk).into(target)
-         */
-        val getBitmap = Picasso.get().load(urlGambarProduk).get()
-        Thread.sleep(500)
+        var getBitmap = Picasso.get().load(urlGambarProduk).get()
+        Thread.sleep(700)
+        getBitmap = singletonData.cropThis(getBitmap)
         return getBitmap
     }
 }

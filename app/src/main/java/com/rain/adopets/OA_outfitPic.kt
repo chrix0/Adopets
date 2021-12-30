@@ -42,6 +42,8 @@ class OA_outfitPic : AppCompatActivity() {
         startAnalysis.setOnClickListener {
             if(singletonData.OASession.insertedOutfit) {
                 var intent = Intent(this, OA_result::class.java)
+                //Button Back nanti tidak bisa digunakan untuk kembali ke activity ini
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }
         }
@@ -50,7 +52,7 @@ class OA_outfitPic : AppCompatActivity() {
     fun displayCam() {
         var takeAPic = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         if (takeAPic.resolveActivity(packageManager) != null){
-            startActivityForResult(takeAPic,  REQUEST_CAMERA) //[NOTE PLEASE : requestCode]
+            startActivityForResult(takeAPic,  REQUEST_CAMERA)
         }
     }
 
@@ -65,6 +67,8 @@ class OA_outfitPic : AppCompatActivity() {
         if(requestCode == REQUEST_CAMERA && resultCode == Activity.RESULT_OK && data != null ){
             var thumbnail = data.extras
             var bitmap = thumbnail?.get("data") as Bitmap
+            bitmap = singletonData.cropThis(bitmap)
+
             singletonData.OASession.outiftPic = bitmap
             photo.setImageBitmap(bitmap)
 
@@ -95,6 +99,8 @@ class OA_outfitPic : AppCompatActivity() {
                 } else {
                     bitmap.copy(Bitmap.Config.ARGB_8888, true)
                 }
+
+                bitmap = singletonData.cropThis(bitmap)
 
                 singletonData.OASession.outiftPic = bitmap
                 photo.setImageBitmap(bitmap)

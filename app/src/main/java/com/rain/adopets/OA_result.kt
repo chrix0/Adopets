@@ -15,7 +15,6 @@ class OA_result : AppCompatActivity() {
 
         val actionbar = supportActionBar
         actionbar!!.title = "Analysis Result"
-        actionbar.setDisplayHomeAsUpEnabled(true)
 
         imagePet.setImageBitmap(singletonData.OASession.petPic)
         imageOutfit.setImageBitmap(singletonData.OASession.outiftPic)
@@ -99,10 +98,5 @@ class OA_result : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 }

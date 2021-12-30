@@ -180,6 +180,7 @@ class shop_checkout : AppCompatActivity() {
                 singletonData.accList[singletonData.currentAccId].cartContent.clear()
                 var toHistory = Intent(this, shop_tracker::class.java)
                 singletonData.accList[singletonData.currentAccId].transactionHistory.add(transaksi)
+                toHistory.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 //Use unless ready
                 startActivity(toHistory)
             }

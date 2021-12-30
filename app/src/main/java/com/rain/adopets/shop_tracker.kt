@@ -68,9 +68,4 @@ class shop_tracker : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    //Agar tombol back tidak bisa digunakan di activity ini
-    override fun onBackPressed() {
-
-    }
 }
