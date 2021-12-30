@@ -55,6 +55,12 @@ class MainActivity : AppCompatActivity() {
             (intentData.getStringExtra(RETURN_LAST_TAB).equals("SHOP")) -> {
                 navBottom.selectedItemId = R.id.shop_Main_Frag
             }
+            (intentData.getStringExtra(RETURN_LAST_TAB).equals("ADOPT")) -> {
+                navBottom.selectedItemId = R.id.adopt_Main_Frag
+            }
+            (intentData.getStringExtra(RETURN_LAST_TAB).equals("BREED")) -> {
+                navBottom.selectedItemId = R.id.breed_Main_Frag
+            }
         }
     }
 }

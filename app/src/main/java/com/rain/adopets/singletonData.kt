@@ -2,12 +2,7 @@ package com.rain.adopets
 
 import android.graphics.Bitmap
 import android.media.ThumbnailUtils
-import androidx.palette.graphics.Palette
 import com.google.gson.Gson
-import dev.jorgecastillo.androidcolorx.library.HEXColor
-import dev.jorgecastillo.androidcolorx.library.RGBColor
-import dev.jorgecastillo.androidcolorx.library.asHex
-import dev.jorgecastillo.androidcolorx.library.asRgb
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
@@ -223,6 +218,87 @@ object singletonData {
             "Stylish polka dot cape for your cute pet. Make her feel special with the cute polka dot cape. The cape is made with comfortable fabric.",
         )
     )
+    var wikiSpecies : MutableList<classWiki> = mutableListOf(
+        classWiki(
+            1,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "info",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            2,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "info",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),classWiki(
+            3,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "info",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            4,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "info",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            1,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "tips",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            2,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "tips",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),classWiki(
+            3,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "tips",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            4,
+            "Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "tips",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        )
+
+    )
 
     //Outfit Analyzer (Untuk memudahkan resetting aja)
     lateinit var OASession : classOASession
@@ -267,6 +343,31 @@ object singletonData {
             "https://images.unsplash.com/photo-1516222338250-863216ce01ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29vbCUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
         )
     )
+    var breedList : MutableList<classBreed> = mutableListOf(
+        classBreed(
+            1,
+            "Lord Umam",
+            "Ginger Cat",
+            "Male",
+            "Medan, Indonesia",
+            "A cat is a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg",
+            "300000",
+            "Healthy"
+        ),
+        classBreed(
+            2,
+            "Joe",
+            "Random Dog",
+            "Male",
+            "Medan, Indonesia",
+            "A dog is not a furry animal that has a long tail and sharp claws. Cats are often kept as pets. 2. countable noun. Cats are lions, tigers, and other wild animals in the same family.",
+            "https://images.unsplash.com/photo-1516222338250-863216ce01ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29vbCUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80",
+            "300000",
+            "Healthy"
+        )
+    )
+
     var currentAdoptId : Int = 0
     //2. UNIVERSAL METHOD + LIBRARY INIT ============================================
 

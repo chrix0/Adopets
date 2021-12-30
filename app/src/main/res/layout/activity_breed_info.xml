@@ -5,145 +5,150 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="25dp"
+    android:weightSum="100"
     tools:context=".breed_info">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        app:cardBackgroundColor="@color/cardview_dark_background"
-        />
-    <TextView
-        android:id="@+id/type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:text="Animal Type"
-        />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
         <ImageView
-            android:id="@+id/nameIcon"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_below="@id/type"
-            android:layout_marginRight="10dp"
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/adopt_name" />
+            android:src="@drawable/test_dog" />
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/tipe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/genderIcon"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_below="@id/type"
-            android:layout_marginRight="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/adopt_gender" />
-        <TextView
-            android:id="@+id/gender"
+            android:paddingTop="15dp"
+            android:text="Information"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/locationIcon"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_below="@id/type"
-            android:layout_marginRight="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/adopt_location" />
-        <TextView
-            android:id="@+id/location"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_name"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet name"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Location"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/priceIcon"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_below="@id/type"
-            android:layout_marginRight="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/breed_price"/>
-        <TextView
-            android:id="@+id/price"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_gender"/>
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Gender"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Price"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/healthIcon"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_below="@id/type"
-            android:layout_marginRight="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/breed_health" />
-        <TextView
-            android:id="@+id/health"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_location"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Location"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Health Status"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:textSize="18dp"
-        android:text="Description"
-        android:textStyle="bold"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_height="140dp">
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/breed_price"/>
+            <TextView
+                android:id="@+id/pricex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Price"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/breed_health"/>
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Health"
+                android:textSize="15sp" />
+        </LinearLayout>
         <TextView
             android:id="@+id/description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptateLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"/>
-    </ScrollView>
+            android:paddingTop="15dp"
+            android:text="Description"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord."
+                android:textSize="13sp" />
+        </ScrollView>
+    </LinearLayout>
+
     <Button
+        android:id="@+id/apply"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="60dp"
-        android:text="Apply"
-        />
+        android:layout_height="0dp"
+        android:background="#e09f12"
+        android:layout_weight="10"
+        android:text="Adopt" />
 </LinearLayout>

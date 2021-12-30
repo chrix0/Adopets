@@ -1,10 +1,18 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.ImageButton
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_breed__main_.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,11 +40,65 @@ class Breed_Main_Frag : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_breed__main_, container, false)
+        val v : View = inflater.inflate(R.layout.fragment_breed__main_, container, false)
+        return run(v)
+    }
+    private fun filter(searchText : String, data : MutableList<classBreed>) : MutableList<classBreed>{
+        var newList : MutableList<classBreed> = mutableListOf()
+        var text = searchText.trim().lowercase()
+        if (text.equals("")){
+            newList.addAll(data)
+        }
+        else{
+            for(i : classBreed in data){
+                if(i.nama.lowercase().contains(text)){
+                    newList.add(i)
+                }
+            }
+        }
+
+        return newList
+    }
+    private fun search(view : View, list : MutableList<classBreed>){
+        var newList = mutableListOf<classBreed>()
+        var search = view.findViewById<EditText>(R.id.search)
+        search.setOnEditorActionListener { textView, i, keyEvent ->
+            if(i == EditorInfo.IME_ACTION_DONE){
+                newList.clear()
+                newList.addAll(filter(search.text.toString(),list))
+                recycleViewUpdate(view,newList)
+            }
+            return@setOnEditorActionListener true
+        }
+    }
+    private fun filterAtoZ(view : View, list : MutableList<classBreed>){
+        var filter = view.findViewById<ImageButton>(R.id.button_filter)
+        filter.setOnClickListener() {
+            list.sortBy { it.nama }
+            list.reverse()
+            recycleViewUpdate(view,list)
+        }
     }
 
+    private fun run(view:View) : View{
+        var data : MutableList<classBreed> = singletonData.breedList
+        recycleViewUpdate(view,data)
+        search(view, data)
+        filterAtoZ(view, data)
+        return view
+    }
+    private fun recycleViewUpdate(view : View, data : MutableList<classBreed>){
+        var breedRecycleView =view.findViewById<RecyclerView>(R.id.breedRecycleView)
+        var MyAdapter = recycler_breed_adapter(requireContext(),data){
+            var intent = Intent(requireContext(), breed_info::class.java)
+            intent.putExtra(SHOW_BREED_INFO,it)
+            startActivity(intent)
+        }
+        breedRecycleView.layoutManager = LinearLayoutManager(requireContext())
+        breedRecycleView.adapter = MyAdapter
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

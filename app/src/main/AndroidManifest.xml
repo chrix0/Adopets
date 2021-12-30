@@ -24,9 +24,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adopets">
         <activity
+            android:name=".wiki_more"
+            android:exported="true" />
+        <activity
             android:name=".splash_screen"
             android:exported="false"
-            android:theme="@style/Theme.Adopets.NoActionBar"/>
+            android:theme="@style/Theme.Adopets.NoActionBar" />
+        <activity
+            android:name=".breed_track"
+            android:exported="true" />
         <activity
             android:name=".breed_form"
             android:exported="true" />

@@ -9,75 +9,128 @@
     android:padding="25dp"
     android:weightSum="100"
     android:orientation="vertical">
-    <ImageView
-        android:id="@+id/photo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/test_dog" />
-
-    <TextView
-        android:id="@+id/information"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Information"
-        android:textSize="17sp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Pet name"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Pet Type"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Pet Gender"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Pet Location"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:text="Description"
-        android:textSize="17sp"
-        android:textStyle="bold" />
-    <ScrollView
-
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:scrollbars="vertical"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:id="@+id/desc"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/photo"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:text="Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord."
-            android:textSize="13sp" />
-    </ScrollView>
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_dog" />
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Information"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_name"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet name"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_type"/>
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Type"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_gender"/>
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Gender"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:src="@drawable/adopt_location"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:text="Pet Location"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Description"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord."
+                android:textSize="13sp" />
+        </ScrollView>
+    </LinearLayout>
+
     <Button
         android:id="@+id/adopt"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
         android:background="#e09f12"
+        android:layout_weight="10"
         android:text="Adopt" />
 </LinearLayout>

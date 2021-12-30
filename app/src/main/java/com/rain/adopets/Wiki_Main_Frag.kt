@@ -1,10 +1,17 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.Button
+import android.widget.EditText
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_wiki__main_.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,10 +40,58 @@ class Wiki_Main_Frag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wiki__main_, container, false)
+        // Inflate the layout for this fragmento
+        val v : View =inflater.inflate(R.layout.fragment_wiki__main_, container, false)
+        return run(v)
     }
 
+    private fun run(view : View) : View{
+        var data : MutableList<classWiki> = singletonData.wikiSpecies
+        var infoRecyclerView =view.findViewById<RecyclerView>(R.id.info)
+        var tipsRecyclerView =view.findViewById<RecyclerView>(R.id.tip)
+        var dataInfo = filter(data,"info")
+        var tipsInfo = filter(data,"tips")
+        var MyAdapter = recycler_wiki_adapter(requireContext(),dataInfo){
+            var intent = Intent(requireContext(), wiki_info::class.java)
+            intent.putExtra(SHOW_WIKI_INFO,it)
+            startActivity(intent)
+        }
+        infoRecyclerView.layoutManager = LinearLayoutManager(requireContext(),
+            LinearLayoutManager.HORIZONTAL, false)
+        infoRecyclerView.adapter = MyAdapter
+
+        var MyAdapter2 = recycler_wiki_adapter(requireContext(),dataInfo){
+            var intent = Intent(requireContext(), wiki_info::class.java)
+            intent.putExtra(SHOW_WIKI_INFO,it)
+            startActivity(intent)
+        }
+        tipsRecyclerView.layoutManager = LinearLayoutManager(requireContext(),
+            LinearLayoutManager.HORIZONTAL, false)
+        tipsRecyclerView.adapter = MyAdapter2
+
+        var moreInfo = view.findViewById<Button>(R.id.moreInfo)
+        moreInfo.setOnClickListener(){
+            var intent = Intent(requireContext(), wiki_more::class.java)
+            intent.putExtra(SHOW_WIKI_MORE,"info")
+            startActivity(intent)
+        }
+        var moreTips = view.findViewById<Button>(R.id.moreTips)
+        moreTips.setOnClickListener(){
+            var intent = Intent(requireContext(), wiki_more::class.java)
+            intent.putExtra(SHOW_WIKI_MORE,"tips")
+            startActivity(intent)
+        }
+        return view
+    }
+    private fun filter(data : MutableList<classWiki>, tipe : String) : MutableList<classWiki>{
+        var newList : MutableList<classWiki> = mutableListOf()
+        for(i : classWiki in data){
+            if(i.tipe.contains(tipe)){
+                newList.add(i)
+            }
+        }
+        return newList
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

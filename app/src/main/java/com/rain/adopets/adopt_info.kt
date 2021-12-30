@@ -15,7 +15,7 @@ class adopt_info : AppCompatActivity() {
 
         //Membuat action bar secara manual dengan tombol up
         val actionbar = supportActionBar
-        actionbar!!.title = intentData.getStringExtra(CHANGE_TITLE)
+        actionbar!!.title = "Info"
         actionbar.setDisplayHomeAsUpEnabled(true)
 
         val data : classAdopt = intentData.getParcelableExtra<classAdopt>(SHOW_ADOPT_INFO) as classAdopt
