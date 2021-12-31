@@ -24,6 +24,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adopets">
         <activity
+            android:name=".recycler_adopt_history"
+            android:exported="true" />
+        <activity
+            android:name=".adopt_history"
+            android:exported="true" />
+        <activity
             android:name=".wiki_more"
             android:exported="true" />
         <activity

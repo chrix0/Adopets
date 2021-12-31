@@ -296,6 +296,16 @@ object singletonData {
             "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
             "tips",
             "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+        ),
+        classWiki(
+            5,
+            "Not Doge",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "Cool doge you meet every time you chill",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
+            "tips",
+            "https://i.kym-cdn.com/photos/images/newsfeed/002/005/085/d6e.jpg",
         )
 
     )

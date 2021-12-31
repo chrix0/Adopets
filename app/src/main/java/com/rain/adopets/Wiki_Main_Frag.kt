@@ -60,7 +60,7 @@ class Wiki_Main_Frag : Fragment() {
             LinearLayoutManager.HORIZONTAL, false)
         infoRecyclerView.adapter = MyAdapter
 
-        var MyAdapter2 = recycler_wiki_adapter(requireContext(),dataInfo){
+        var MyAdapter2 = recycler_wiki_adapter(requireContext(),tipsInfo){
             var intent = Intent(requireContext(), wiki_info::class.java)
             intent.putExtra(SHOW_WIKI_INFO,it)
             startActivity(intent)

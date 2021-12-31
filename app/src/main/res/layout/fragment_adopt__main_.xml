@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Adopt_Main_Frag">
 
     <!-- TODO: Update blank fragment layout -->
@@ -30,8 +31,6 @@
                 />
 
         </LinearLayout>
-
-
         <ScrollView
             android:layout_marginTop="10dp"
             android:layout_below="@id/category"
@@ -53,7 +52,13 @@
 
     </RelativeLayout>
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/shop_transaction_history"
+        android:layout_margin="16dp" />
 
 
 </FrameLayout>

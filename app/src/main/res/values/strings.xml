@@ -27,7 +27,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-                                    <!-- EXTRACT STRING RESOURCE DI SINI -->
+    <!-- EXTRACT STRING RESOURCE DI SINI -->
 
     <!--Splash-->
     <string name="adopetsTitle">Adopets</string>
@@ -39,7 +39,7 @@
     <string name="breed">Breed</string>
     <string name="profile">Profile</string>
 
-                                                    <!-- Shop -->
+    <!-- Shop -->
 
     <!--Shop - Basket-->
     <string name="your_basket">Your basket</string>
@@ -75,7 +75,7 @@
     <string name="cancel">Cancel</string>
 
     <!--Shop - Dialog Phone Number  -->
-        <!--none, phone number, save, cancel sudah ada -->
+    <!--none, phone number, save, cancel sudah ada -->
 
     <!--Shop - Dialog History / Tracker -->
     <string name="transaction_id">Transaction ID</string>
@@ -102,7 +102,7 @@
     <string name="in_preparation">In preparation</string>
     <string name="details">Details</string>
     <string name="cancel_order">Cancel order</string>
-        <!--Recycler shop lain tidak perlu diextract stringnya -->
+    <!--Recycler shop lain tidak perlu diextract stringnya -->
 
     <!-- [ Beberapa string di dalam code yang perlu diextract.. ] -->
     <!--Shop - Basket -->
@@ -132,7 +132,7 @@
     <string name="deleteFromBasketPrompt">Delete product from basket?</string>
     <string name="confirmDeleteFromBasket">You are going to delete %1$s from your basket.</string>
     <string name="OK">OK</string>
-        <!--Cancel sudah ada -->
+    <!--Cancel sudah ada -->
 
     <!--Shop - Shop Transaction Adapter-->
     <string name="cancelOrderDialogTitle">Cancel order?</string>
@@ -140,7 +140,7 @@
     <string name="productCount">Product count : </string>
 
 
-                                            <!-- Outfit Analyzer -->
+    <!-- Outfit Analyzer -->
     <!-- Pet Pic -->
     <string name="stepTitle">Step:</string>
     <string name="stepCount12">1 out of 2</string>

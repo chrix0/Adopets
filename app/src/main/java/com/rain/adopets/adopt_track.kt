@@ -16,7 +16,6 @@ class adopt_track : AppCompatActivity() {
         setContentView(R.layout.activity_adopt_track)
         val actionbar = supportActionBar
         actionbar!!.title = "Track"
-        actionbar.setDisplayHomeAsUpEnabled(true)
         home.setOnClickListener(){
             var intent = Intent(this, MainActivity::class.java)
             intent.putExtra(RETURN_LAST_TAB,"ADOPT")
