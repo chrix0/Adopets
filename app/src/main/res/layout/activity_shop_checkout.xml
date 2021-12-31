@@ -19,9 +19,9 @@
             android:id="@+id/title_metode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose payment method"
-            android:textSize="17sp"
+            android:text="@string/choose_payment_method"
             android:textColor="@color/black"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -33,12 +33,12 @@
                 android:id="@+id/kartu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Credit card / Gopay / OVO"/>
+                android:text="@string/method_1_card"/>
             <RadioButton
                 android:id="@+id/virtual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Virtual Account"/>
+                android:text="@string/method_2_virtual"/>
         </RadioGroup>
 
         <LinearLayout
@@ -59,7 +59,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7.5"
-                    android:text="Shipping address"
+                    android:text="@string/shipping_address"
                     android:textSize="17sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -69,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_weight="0.5"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textSize="12sp"/>
             </LinearLayout>
             <TextView
@@ -99,7 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7.5"
-                    android:text="Phone number"
+                    android:text="@string/phone_number"
                     android:textSize="17sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_weight="0.5"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textSize="12sp"/>
             </LinearLayout>
             <TextView
@@ -147,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:textStyle="bold"
-            android:text="Subtotal"/>
+            android:text="@string/subtotal"/>
         <TextView
             android:id="@+id/subtotal"
             android:layout_width="0dp"
@@ -167,7 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:textStyle="bold"
-            android:text="Shipping cost"/>
+            android:text="@string/shipping_cost"/>
         <TextView
             android:id="@+id/ongkir"
             android:layout_width="0dp"
@@ -187,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:textStyle="bold"
-            android:text="Total"/>
+            android:text="@string/total"/>
         <TextView
             android:id="@+id/total"
             android:layout_width="0dp"
@@ -208,7 +208,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#e09f12"
-            android:text="Checkout" />
+            android:text="@string/checkout" />
 
     </RelativeLayout>
 

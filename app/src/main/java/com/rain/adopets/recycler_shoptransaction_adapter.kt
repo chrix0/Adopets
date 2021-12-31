@@ -38,17 +38,19 @@ class recycler_shoptransaction_adapter(val context : Context, data : MutableList
         holder.tampil.layoutManager = LinearLayoutManager(context)
         holder.tampil.adapter = adapter
 
-        holder.count.setText("Product count : "  + myData[position].items.size.toString())
+
+
+        holder.count.setText(context.getString(R.string.productCount) + myData[position].items.size.toString())
 
         holder.cancel.setOnClickListener {
             var dialog = AlertDialog.Builder(context)
-                .setTitle("Cancel order?")
-                .setMessage("Your order will be canceled and deleted.")
-                .setPositiveButton("OK", DialogInterface.OnClickListener{ dialogInterface, i ->
+                .setTitle(context.getString(R.string.cancelOrderDialogTitle))
+                .setMessage(context.getString(R.string.cancelOrderExplain))
+                .setPositiveButton(context.getString(R.string.OK), DialogInterface.OnClickListener{ dialogInterface, i ->
                     myData.removeAt(position)
                     notifyDataSetChanged()
                 })
-                .setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialogInterface, i ->
+                .setNegativeButton(context.getString(R.string.cancel), DialogInterface.OnClickListener{ dialogInterface, i ->
                 })
             dialog.show()
         }

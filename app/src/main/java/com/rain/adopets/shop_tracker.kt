@@ -23,13 +23,13 @@ class shop_tracker : AppCompatActivity() {
         setContentView(R.layout.activity_shop_tracker)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Shop Purchase History"
+        actionbar!!.title = getString(R.string.purchase_history_title)
 
         var adapter = recycler_shoptransaction_adapter(this, singletonData.accList[singletonData.currentAccId].transactionHistory){
             var layout = layoutInflater.inflate(R.layout.dialog_shop_history_details,null)
             var dialog = AlertDialog.Builder(this).apply{
                 setView(layout)
-                setTitle("Purchase Details")
+                setTitle(getString(R.string.purchase_details_title))
             }
             var creator = dialog.create()
 

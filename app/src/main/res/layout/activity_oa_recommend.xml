@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Here is our recommedation based on your pet's color." />
+            android:text="@string/ourRecommendation" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,24 +24,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:text="Analogous"/>
+                android:text="@string/analogous"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:layout_marginBottom="10dp"
-                android:text="Analogous colors are groups of three colors that are next to each other on the color wheel, and a tertiary. Red, orange, and red-orange are examples."></TextView>
-            <ScrollView
+                android:text="@string/analogous_colors_are_groups_of_three_colors_that_are_next_to_each_other_on_the_color_wheel_and_a_tertiary_red_orange_and_red_orange_are_examples"></TextView>
+            <FrameLayout
                 android:id="@+id/scrollAnalog"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:scrollbars="horizontal">
+
+                <TextView
+                    android:id="@+id/zeroAnalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:text="@string/noRecItems"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/itemAnalog"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </ScrollView>
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"/>
+            </FrameLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,24 +61,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:text="Compliment"/>
+                android:text="@string/complement"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:layout_marginBottom="10dp"
-                android:text="Complementary colors are pairs of colors which, when combined or mixed, cancel each other out."></TextView>
-            <ScrollView
+                android:text="@string/complementary_colors_are_pairs_of_colors_which_when_combined_or_mixed_cancel_each_other_out"></TextView>
+            <FrameLayout
                 android:id="@+id/scrollComp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:scrollbars="horizontal">
-
+                <TextView
+                    android:id="@+id/zeroComp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:text="Sorry. No outift recommendations for this category."/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/itemComp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </ScrollView>
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"/>
+            </FrameLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -83,14 +99,14 @@
                 android:id="@+id/tryAgain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Try again" />
+                android:text="@string/try_again" />
 
             <Button
                 android:id="@+id/backToShop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="Return to shop" />
+                android:text="@string/return_to_shop" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

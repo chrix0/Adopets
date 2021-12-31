@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:text="Information"
+        android:text="@string/information"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
-                android:text="Quantity"
+                android:text="@string/quantity"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -129,6 +129,6 @@
             android:layout_height="50dp"
             android:layout_below="@id/jumlahBarang"
             android:background="#e09f12"
-            android:text="Add to basket" />
+            android:text="@string/add_to_basket" />
     </RelativeLayout>
 </LinearLayout>

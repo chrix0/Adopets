@@ -24,7 +24,7 @@ class shop_productList : AppCompatActivity() {
         adapter = recycler_products_adapter(tempList){
             val info = Intent(this, shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Product Info")
+            info.putExtra(CHANGE_TITLE,getString(R.string.product_info_title))
             startActivity(info)
         }
 
@@ -38,7 +38,7 @@ class shop_productList : AppCompatActivity() {
                 adapter = recycler_products_adapter(tempList){
                     val info = Intent(this, shop_infoProduk::class.java)
                     info.putExtra(SHOW_PRODUCT_INFO, it)
-                    info.putExtra(CHANGE_TITLE,"Product Info")
+                    info.putExtra(CHANGE_TITLE,getString(R.string.product_info_title))
                     startActivity(info)
                 }
                 productList.adapter = adapter
@@ -59,7 +59,7 @@ class shop_productList : AppCompatActivity() {
                     adapter = recycler_products_adapter(tempList){
                         val info = Intent(this, shop_infoProduk::class.java)
                         info.putExtra(SHOW_PRODUCT_INFO, it)
-                        info.putExtra(CHANGE_TITLE,"Product Info")
+                        info.putExtra(CHANGE_TITLE,getString(R.string.product_info_title))
                         startActivity(info)
                     }
                     productList.adapter = adapter
@@ -70,7 +70,7 @@ class shop_productList : AppCompatActivity() {
                     adapter = recycler_products_adapter(tempList){
                         val info = Intent(this, shop_infoProduk::class.java)
                         info.putExtra(SHOW_PRODUCT_INFO, it)
-                        info.putExtra(CHANGE_TITLE,"Product Info")
+                        info.putExtra(CHANGE_TITLE,getString(R.string.product_info_title))
                         startActivity(info)
                     }
                     productList.adapter = adapter

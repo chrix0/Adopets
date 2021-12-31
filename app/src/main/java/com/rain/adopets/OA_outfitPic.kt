@@ -10,6 +10,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.palette.graphics.Palette
 import dev.jorgecastillo.androidcolorx.library.asHex
 import kotlinx.android.synthetic.main.activity_oa_outfit_pic.*
@@ -28,7 +29,7 @@ class OA_outfitPic : AppCompatActivity() {
         setContentView(R.layout.activity_oa_outfit_pic)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Pet Outfit Analyzer"
+        actionbar!!.title = getString(R.string.petAnalyzerTitle)
         actionbar.setDisplayHomeAsUpEnabled(true)
 
         openCamera.setOnClickListener {
@@ -45,6 +46,9 @@ class OA_outfitPic : AppCompatActivity() {
                 //Button Back nanti tidak bisa digunakan untuk kembali ke activity ini
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
+            }
+            else{
+                Toast.makeText(this,getString(R.string.need_outfit_pic), Toast.LENGTH_SHORT).show()
             }
         }
     }

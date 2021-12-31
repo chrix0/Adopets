@@ -5,22 +5,15 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.squareup.picasso.Target
-import android.graphics.drawable.Drawable
-
-import com.squareup.picasso.Picasso
 
 import android.graphics.Bitmap
 import android.os.AsyncTask
+import android.view.View
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.squareup.picasso.Picasso.LoadedFrom
 import dev.jorgecastillo.androidcolorx.library.RGBColor
 import dev.jorgecastillo.androidcolorx.library.asRgb
 import kotlinx.android.synthetic.main.activity_oa_recommend.*
-import kotlinx.android.synthetic.main.recycler_tracker_productlist.*
-import java.lang.Exception
-import kotlinx.coroutines.*
 
 @Suppress("DEPRECATION")
 class oa_recommend : AppCompatActivity() {
@@ -36,7 +29,7 @@ class oa_recommend : AppCompatActivity() {
         setContentView(R.layout.activity_oa_recommend)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Recommendation"
+        actionbar!!.title = getString(R.string.recommedationTitle)
 
         tryAgain.setOnClickListener {
             var intent = Intent(this, OA_petPic::class.java)
@@ -45,13 +38,14 @@ class oa_recommend : AppCompatActivity() {
 
         backToShop.setOnClickListener {
             var intent = Intent(this, MainActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             intent.putExtra(RETURN_LAST_TAB, "SHOP")
             startActivity(intent)
         }
     }
 
     inner class Async : AsyncTask<Void,Void,Unit>(){
-        var dialog = ProgressDialog(context);
+        var dialog = ProgressDialog(context)
         override fun doInBackground(vararg p0: Void?): Unit? {
             if (!singletonData.allImageProcessed){
                 for(i in 0 until singletonData.petOutfitList.size){
@@ -59,17 +53,17 @@ class oa_recommend : AppCompatActivity() {
                 }
                 singletonData.allImageProcessed = true
             }
-            firstnAnalog = checkColor(singletonData.OASession.rec[0].asRgb())
-            firstnComplement = mutableListOf()
-            firstnComplement.addAll(checkColor(singletonData.OASession.rec[1].asRgb()))
-            firstnComplement.removeAll(checkColor(singletonData.OASession.rec[2].asRgb()))
-            firstnComplement.addAll(checkColor(singletonData.OASession.rec[2].asRgb()))
+            firstnComplement= checkColor(singletonData.OASession.rec[0].asRgb())
+            firstnAnalog = mutableListOf()
+            firstnAnalog.addAll(checkColor(singletonData.OASession.rec[1].asRgb()))
+            firstnAnalog.removeAll(checkColor(singletonData.OASession.rec[2].asRgb()))
+            firstnAnalog.addAll(checkColor(singletonData.OASession.rec[2].asRgb()))
 
             return null
         }
         override fun onPreExecute() {
             super.onPreExecute()
-            dialog.setMessage("Processing.. \nDo not worry. It will be faster next time.")
+            dialog.setMessage(getString(R.string.recommendLoading))
             dialog.setCancelable(false)
             dialog.show()
         }
@@ -77,13 +71,13 @@ class oa_recommend : AppCompatActivity() {
         override fun onPostExecute(result: Unit?) {
             super.onPostExecute(result)
             if (dialog.isShowing()) {
-                dialog.dismiss();
+                dialog.dismiss()
             }
 
             var analog = recycler_products_adapter(firstnAnalog){
                 val info = Intent(context, shop_infoProduk::class.java)
                 info.putExtra(SHOW_PRODUCT_INFO, it)
-                info.putExtra(CHANGE_TITLE,"Product Info")
+                info.putExtra(CHANGE_TITLE,context.getString(R.string.product_info_title))
                 startActivity(info)
             }
             itemAnalog.adapter = analog
@@ -93,13 +87,20 @@ class oa_recommend : AppCompatActivity() {
             var comp = recycler_products_adapter(firstnComplement){
                 val info = Intent(context, shop_infoProduk::class.java)
                 info.putExtra(SHOW_PRODUCT_INFO, it)
-                info.putExtra(CHANGE_TITLE,"Product Info")
+                info.putExtra(CHANGE_TITLE,context.getString(R.string.product_info_title))
                 startActivity(info)
             }
             itemComp.adapter = comp
             itemComp.layoutManager = LinearLayoutManager(context,
                 LinearLayoutManager.HORIZONTAL, false)
 
+            if (analog.itemCount == 0){
+                zeroAnalog.setVisibility(View.VISIBLE)
+            }
+
+            if(comp.itemCount == 0){
+                zeroComp.setVisibility(View.VISIBLE)
+            }
         }
     }
 
@@ -163,9 +164,5 @@ class oa_recommend : AppCompatActivity() {
             else -> "ANY"
         }
         return conclusion
-    }
-
-    override fun onBackPressed() {
-
     }
 }

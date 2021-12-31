@@ -15,7 +15,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Transaction ID"/>
+            android:text="@string/transaction_id"/>
         <TextView
             android:id="@+id/transactionID"
             android:gravity="end"
@@ -36,7 +36,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Customer's username"/>
+            android:text="@string/customer_s_username"/>
         <TextView
             android:id="@+id/username"
             android:gravity="end"
@@ -57,7 +57,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Time of Purchase"/>
+            android:text="@string/time_of_purchase"/>
         <TextView
             android:id="@+id/datePurchase"
             android:gravity="end"
@@ -85,7 +85,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Payment Method"/>
+            android:text="@string/payment_method"/>
         <TextView
             android:id="@+id/method"
             android:gravity="end"
@@ -106,7 +106,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Shipping Address"/>
+            android:text="@string/shipping_address"/>
         <TextView
             android:id="@+id/address"
             android:gravity="end"
@@ -127,7 +127,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Phone Number"/>
+            android:text="@string/phone_number"/>
         <TextView
             android:id="@+id/phone"
             android:gravity="end"
@@ -148,7 +148,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Sub-total"/>
+            android:text="@string/subtotal"/>
         <TextView
             android:id="@+id/subtotal"
             android:gravity="end"
@@ -169,7 +169,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Shipping Cost"/>
+            android:text="@string/shipping_cost"/>
         <TextView
             android:id="@+id/shipCost"
             android:gravity="end"
@@ -190,7 +190,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Total"/>
+            android:text="@string/total"/>
         <TextView
             android:id="@+id/total"
             android:gravity="end"
@@ -205,7 +205,7 @@
         android:id="@+id/closeDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Close details"
+        android:text="@string/close_details"
         android:layout_marginTop="15dp"/>
 
 </LinearLayout>
