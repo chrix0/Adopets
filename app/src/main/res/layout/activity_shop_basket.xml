@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your basket"
+        android:text="@string/your_basket"
         android:textStyle="bold"
         android:layout_weight="1"/>
     <ScrollView
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:textStyle="bold"
-            android:text="Subtotal"/>
+            android:text="@string/subtotal"/>
         <TextView
             android:id="@+id/subtotal"
             android:layout_width="0dp"
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#e09f12"
-            android:text="Choose payment method" />
+            android:text="@string/choose_payment_method" />
 
     </RelativeLayout>
 

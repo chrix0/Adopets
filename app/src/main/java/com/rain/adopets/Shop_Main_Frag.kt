@@ -59,7 +59,7 @@ class Shop_Main_Frag : Fragment() {
         adapterFood = recycler_products_adapter(first5food){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Product Info")
+            info.putExtra(CHANGE_TITLE,requireContext().getString(R.string.product_info_title))
             startActivity(info)
         }
         foodList.adapter = adapterFood
@@ -69,7 +69,7 @@ class Shop_Main_Frag : Fragment() {
         adapterUtensils = recycler_products_adapter(first5uten){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Product Info")
+            info.putExtra(CHANGE_TITLE,requireContext().getString(R.string.product_info_title))
             startActivity(info)
         }
         utensilsList.adapter = adapterUtensils
@@ -79,7 +79,7 @@ class Shop_Main_Frag : Fragment() {
         adapterOutfit = recycler_products_adapter(first5outfit){
             val info = Intent(requireContext(), shop_infoProduk::class.java)
             info.putExtra(SHOW_PRODUCT_INFO, it)
-            info.putExtra(CHANGE_TITLE,"Product Info")
+            info.putExtra(CHANGE_TITLE,requireContext().getString(R.string.product_info_title))
             startActivity(info)
         }
         outfitList.adapter = adapterOutfit
@@ -94,20 +94,20 @@ class Shop_Main_Frag : Fragment() {
         moreFood.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petFoodList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Foods")
+            more.putExtra(CHANGE_TITLE, requireContext().getString(R.string.pet_foods_title))
             startActivity(more)
         }
         moreUtensils.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petUtensilList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Tools and Supplies")
+            more.putExtra(CHANGE_TITLE, requireContext().getString(R.string.pet_tools_title))
             startActivity(more)
         }
 
         moreOutfit.setOnClickListener {
             val more = Intent(requireContext(), shop_productList::class.java)
             more.putExtra(EXTRA_PRODUCT,singletonData.petOutfitList as ArrayList<classProduk>)
-            more.putExtra(CHANGE_TITLE, "Pet Outfits")
+            more.putExtra(CHANGE_TITLE, requireContext().getString(R.string.pet_outfit_title))
             startActivity(more)
         }
 

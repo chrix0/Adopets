@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Result"
+                android:text="@string/result"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/resultTitle"
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your pet:"
+                android:text="@string/your_pet"
                 android:gravity="center" />
 
             <androidx.cardview.widget.CardView
@@ -63,7 +63,7 @@
                 android:id="@+id/image2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your pet's outfit:"
+                android:text="@string/your_pet_s_outfit"
                 android:gravity="center"
                 android:layout_marginTop="10dp"/>
 
@@ -91,7 +91,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Recommended color and similiarity percentage"
+                android:text="@string/recommended_color_and_similiarity_percentage"
                 android:gravity="center"
                 android:layout_weight="1"/>
 
@@ -133,7 +133,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Information"
+                android:text="@string/information"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
             <TextView
                 android:id="@+id/resultExplain"
@@ -151,7 +151,7 @@
                 android:id="@+id/toRekomendasi"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Recommended outfits" />
+                android:text="@string/recommended_outfits" />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>

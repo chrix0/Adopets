@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_weight="8"
             android:background="@color/white"
-            android:hint="Search product"
+            android:hint="@string/search_product"
             android:imeOptions="actionDone"
             android:inputType="text"
             android:maxLines="1"

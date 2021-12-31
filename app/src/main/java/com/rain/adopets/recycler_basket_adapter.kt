@@ -61,13 +61,13 @@ class recycler_basket_adapter(val context : Context,
 
         holder.deleter.setOnClickListener{
             var dialog = AlertDialog.Builder(context)
-                .setTitle("Delete product from basket?")
-                .setMessage("You are going to delete \"${myData[position].namaProduk}\" from your basket.")
-                .setPositiveButton("OK", DialogInterface.OnClickListener{ dialogInterface, i ->
+                .setTitle(context.getString(R.string.deleteFromBasketPrompt))
+                .setMessage(context.getString(R.string.confirmDeleteFromBasket, myData[position].namaProduk))
+                .setPositiveButton(context.getString(R.string.OK), DialogInterface.OnClickListener{ dialogInterface, i ->
                     myData.removeAt(position)
                     update()
                 })
-                .setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialogInterface, i ->
+                .setNegativeButton(context.getString(R.string.cancel), DialogInterface.OnClickListener{ dialogInterface, i ->
                 })
             dialog.show()
         }

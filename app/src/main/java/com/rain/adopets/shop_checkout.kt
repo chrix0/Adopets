@@ -38,8 +38,8 @@ class shop_checkout : AppCompatActivity() {
         //items
         transaksi.items.addAll(user.cartContent)
 
-        val promptAddress : String = "(Tap edit button to add address)"
-        val promptPhone : String = "(Tap edit button to add phone number)"
+        val promptAddress : String = getString(R.string.promptAddress)
+        val promptPhone : String = getString(R.string.promptPhone)
 
         //address cara 1
         if(user.shippingAddress.size == 0){
@@ -77,7 +77,7 @@ class shop_checkout : AppCompatActivity() {
             var layout = layoutInflater.inflate(R.layout.dialog_shop_checkout_address,null)
             var dialog = AlertDialog.Builder(this).apply{
                 setView(layout)
-                setTitle("Change Shipping Address")
+                setTitle(getString(R.string.change_address))
             }
             var creator = dialog.create()
             var address = layout.findViewById<EditText>(R.id.tbAddress)
@@ -100,14 +100,14 @@ class shop_checkout : AppCompatActivity() {
                     || city.text.toString().equals("")
                     || postal.text.toString().equals("")
                 ){
-                    Toast.makeText(this,"You need to fill every field.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.need_all_filled),Toast.LENGTH_SHORT).show()
                 }
                 else{
                     user.shippingAddress = mutableListOf<String>(address.text.toString(), city.text.toString(), province.text.toString(), postal.text.toString())
                     singletonData.accList[singletonData.currentAccId].shippingAddress = user.shippingAddress
                     transaksi.address = user.shippingAddress
                     alamat.setText(formatAlamat(transaksi.address))
-                    Toast.makeText(this,"Your address has been successfully updated.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.success_update_address),Toast.LENGTH_SHORT).show()
                     creator.cancel()
                 }
             }
@@ -124,7 +124,7 @@ class shop_checkout : AppCompatActivity() {
             var layout = layoutInflater.inflate(R.layout.dialog_shop_checkout_phone,null)
             var dialog = AlertDialog.Builder(this).apply{
                 setView(layout)
-                setTitle("Change Phone Number")
+                setTitle(getString(R.string.change_phone))
             }
             var creator = dialog.create()
 
@@ -139,14 +139,14 @@ class shop_checkout : AppCompatActivity() {
 
             done.setOnClickListener {
                 if(phone.text.toString().equals("")){
-                    Toast.makeText(this,"You need to enter your phone number.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.need_phone_filled),Toast.LENGTH_SHORT).show()
                 }
                 else{
                     user.phoneNumber = phone.text.toString()
                     singletonData.accList[singletonData.currentAccId].phoneNumber = user.phoneNumber
                     transaksi.phoneNumber = user.phoneNumber
                     telp.setText(user.phoneNumber)
-                    Toast.makeText(this,"Your phone number has been successfully updated.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.success_update_phone),Toast.LENGTH_SHORT).show()
                     creator.cancel()
                 }
             }
@@ -174,14 +174,13 @@ class shop_checkout : AppCompatActivity() {
             if(transaksi.method.equals("")
                 || transaksi.address.equals("")
                 || transaksi.phoneNumber.equals("")){
-                Toast.makeText(this, "Please fill in all the data.",Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.need_all_filled),Toast.LENGTH_LONG).show()
             }
             else{
                 singletonData.accList[singletonData.currentAccId].cartContent.clear()
                 var toHistory = Intent(this, shop_tracker::class.java)
                 singletonData.accList[singletonData.currentAccId].transactionHistory.add(transaksi)
                 toHistory.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                //Use unless ready
                 startActivity(toHistory)
             }
         }

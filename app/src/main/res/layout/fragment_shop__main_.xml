@@ -25,7 +25,7 @@
                     android:id="@+id/title_food"
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
-                    android:text="Pet food"
+                    android:text="@string/pet_foods"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_toRightOf="@id/title_food"
-                    android:text="More items" />
+                    android:text="@string/more_items" />
 
                 <ScrollView
                     android:id="@+id/scrollFood"
@@ -63,7 +63,7 @@
                     android:id="@+id/title_utensils"
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
-                    android:text="Pet Tools and Supplies"
+                    android:text="@string/pet_tools_and_supplies"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
 
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_toRightOf="@id/title_utensils"
-                    android:text="More items" />
+                    android:text="@string/more_items" />
 
                 <ScrollView
                     android:id="@+id/scrollUtensils"
@@ -102,7 +102,7 @@
                     android:id="@+id/title_outfit"
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
-                    android:text="Pet Outfit"
+                    android:text="@string/pet_outfit"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
 

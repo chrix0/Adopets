@@ -68,38 +68,38 @@ object singletonData {
         //Add stuff
         classProduk(
             4,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Almo Nature 6 x 70g",
+            110000,
+            "https://shop-cdn-m.mediazs.com/bilder/almo/nature/x/g/0/400/64491_pla_almonature_huhn_mit_kaese_0.jpg",
+            "Natural wet cat food with a minimum 60% meat and fish content. It is gluten-free and full of nutrients, containing no artificial additives & available in a range of delicious, mouth-watering flavours."
         ),
         classProduk(
             5,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Felix As Good As It Looks Mega Pack (Beef, Chicken, Cod & Tuna) 120 x 100g",
+            650500,
+            "https://shop-cdn-m.mediazs.com/bilder/felix/as/good/as/it/looks/mega/pack/x/g/3/400/81762_felix_megapack_120x100g_3.jpg",
+            "Now your cat can enjoy Felix As Good As It Looks complete wet cat food in a great value mega pack, with 4 different flavour varieties of juicy chunks in a flavoursome jelly and practical pouches.",
         ),
         classProduk(
             6,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Sanabelle Sterilised 2kg",
+            260000,
+            "https://shop-cdn-m.mediazs.com/bilder/sanabelle/sterilised/7/400/81412_pla_bosch_sanabelle_sterilized_2kg_7.jpg",
+            "Dry food with a reduced energy content for sterilised/neutered cats 12 months+. This grain-free kibble is fibre-rich and made with lots of poultry. It will help your pet to maintain a healthy weight.",
         ),
         classProduk(
             7,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Applaws Pouches Cat Food in Broth Mixed Pack 12 x 70g - Chicken selection",
+            237000,
+            "https://shop-cdn-m.mediazs.com/bilder/applaws/pouches/cat/food/in/broth/mixed/pack/x/g/7/400/174210_7.jpg",
+            "Natural, complementary cat food in a delicious broth. This tasty wet food is rich in animal protein. It is full of flavour with no artificial preservatives and colours.",
         ),
         classProduk(
             8,
-            "Animonda vom Feinsten Adult Grain-Free (Poultry & Veal) 6 x 150g",
-            98000,
-            "https://shop-cdn-m.mediazs.com/bilder/animonda/vom/feinsten/adult/grainfree/x/g/8/400/80676_pla_animonda_vomfeinsten_adult_mitgefluegel_kalb_150g_hs_01_8.jpg",
-            "Complete adult dog food with plenty of meat. No added grain or soya, very tasty with high quality meat. Even for food-sensitive dogs & no artificial additives.",
+            "Dokas Dried Meat Snacks - Saver Pack: 3 x 70g Dried Rabbit Meat",
+            89000,
+            "https://shop-cdn-m.mediazs.com/bilder/dokas/dried/meat/snacks/2/400/200596_pla_dokas_fleischsnack_huehnerbrust_streifen_250g_hs_01_2.jpg",
+            "Delicious meaty snacks by Dokas, low in fat and tasty, with 93% pure meat, no added sugar, variety for your pet, strip snacks, also suitable for cats and ferrets.",
         )
     )
 

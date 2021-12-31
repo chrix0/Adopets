@@ -33,7 +33,7 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="In preparation"
+                            android:text="@string/in_preparation"
                             android:layout_weight="4"
                             android:textColor="@color/black"
                             android:background="@color/yellowish"
@@ -63,7 +63,7 @@
                     android:layout_marginTop="10dp"
                     android:backgroundTint="@color/darkerBrown"
                     android:elevation="10dp"
-                    android:text="Details"
+                    android:text="@string/details"
                     android:textColor="@color/white"
                     android:textSize="10dp" />
 
@@ -74,7 +74,7 @@
                     android:layout_below="@id/details"
 
                     android:background="@color/transparent"
-                    android:text="Cancel order"
+                    android:text="@string/cancel_order"
                     android:textSize="10dp" />
             </RelativeLayout>
 

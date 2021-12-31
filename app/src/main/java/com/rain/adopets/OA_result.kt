@@ -14,7 +14,7 @@ class OA_result : AppCompatActivity() {
         setContentView(R.layout.activity_oa_result)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Analysis Result"
+        actionbar!!.title = getString(R.string.Analysis_Result)
 
         imagePet.setImageBitmap(singletonData.OASession.petPic)
         imageOutfit.setImageBitmap(singletonData.OASession.outiftPic)
@@ -84,12 +84,12 @@ class OA_result : AppCompatActivity() {
             true ->{
                 resultTitle.text = "PASS"
                 resultTitle.setTextColor(Color.GREEN)
-                resultExplain.text = "Your color choice of your pet's outfit is looking good! You can check for more outfits by pressing the button below."
+                resultExplain.text = getString(R.string.result_pass)
             }
             else ->{
                 resultTitle.text = "FAULTY"
                 resultTitle.setTextColor(Color.RED)
-                resultExplain.text = "Your color choice of your pet's outfit seems to be unsuitable. You can follow one of the recommended colors or tap the button below to check for outfits which are suitable for yout pet! "
+                resultExplain.text = getString(R.string.result_faulty)
             }
         }
 
@@ -97,6 +97,5 @@ class OA_result : AppCompatActivity() {
             var intent = Intent(this, oa_recommend::class.java)
             startActivity(intent)
         }
-
     }
 }

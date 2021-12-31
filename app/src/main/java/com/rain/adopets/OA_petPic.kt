@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.palette.graphics.Palette
@@ -30,7 +31,7 @@ class OA_petPic : AppCompatActivity() {
         singletonData.OASession = classOASession()
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Pet Outfit Analyzer"
+        actionbar!!.title = getString(R.string.petAnalyzerTitle)
 
         openCamera.setOnClickListener {
             displayCam()
@@ -44,6 +45,9 @@ class OA_petPic : AppCompatActivity() {
             if(singletonData.OASession.insertedPet){
                 var intent = Intent(this, OA_outfitPic::class.java)
                 startActivity(intent)
+            }
+            else{
+                Toast.makeText(this,getString(R.string.need_pet_pic),Toast.LENGTH_SHORT).show()
             }
         }
     }
