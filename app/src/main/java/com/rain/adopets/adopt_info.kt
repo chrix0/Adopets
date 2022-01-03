@@ -28,6 +28,7 @@ class adopt_info : AppCompatActivity() {
 
         adopt.setOnClickListener(){
             var intent = Intent(this, adopt_form::class.java)
+            singletonData.curAdopting = data
             startActivity(intent)
         }
     }

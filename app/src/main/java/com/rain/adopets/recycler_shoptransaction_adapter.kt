@@ -39,7 +39,6 @@ class recycler_shoptransaction_adapter(val context : Context, data : MutableList
         holder.tampil.adapter = adapter
 
 
-
         holder.count.setText(context.getString(R.string.productCount) + myData[position].items.size.toString())
 
         holder.cancel.setOnClickListener {

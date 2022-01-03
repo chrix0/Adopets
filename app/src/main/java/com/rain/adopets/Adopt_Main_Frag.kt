@@ -13,6 +13,7 @@ import android.widget.Spinner
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.rain.adopets.singletonData.adoptList
 import kotlinx.android.synthetic.main.activity_register.view.*
 import kotlinx.android.synthetic.main.activity_shop_product_list.*
@@ -71,6 +72,11 @@ class Adopt_Main_Frag : Fragment() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
+        }
+        var history = view.findViewById<FloatingActionButton>(R.id.history)
+        history.setOnClickListener(){
+            var intent = Intent(requireContext(), adopt_history::class.java)
+            startActivity(intent)
         }
         return view
     }

@@ -315,6 +315,18 @@ object singletonData {
     var allImageProcessed = false
 
     // Adopt
+    var adoptHistory : MutableList<classAdoptHistory> = mutableListOf(classAdoptHistory(
+        1,
+        "Stray Cat",
+        "Male",
+        "Medan, Indonesia",
+        "None",
+        "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg")
+    )
+
+    lateinit var curAdopting : classAdopt
+
+
     var adoptList : MutableList<classAdopt> = mutableListOf(
         classAdopt(
             1,
