@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.app.ShareCompat
 import kotlinx.android.synthetic.main.fragment_profile__main_.*
 
 
@@ -68,11 +69,16 @@ class Profile_Main_Frag : Fragment() {
             //startActivity(intent)
         //}
 
-        //var share = v.findViewById<Button>(R.id.share)
-        //share.setOnClickListener{
-        //var intent = Intent(requireContext(),share::class.java)
-        //startActivity(intent)
-        //}
+        var share = v.findViewById<Button>(R.id.share)
+        share.setOnClickListener{
+            val mimeType = "text/plain"
+            ShareCompat.IntentBuilder
+                .from(this.requireActivity())
+                .setType(mimeType)
+                .setChooserTitle("Share this app to your friends!")
+                .setText("Find your furever best friend with Adopets!")
+                .startChooser()
+        }
 
         var logout = v.findViewById<Button>(R.id.logout)
         logout.setOnClickListener{
