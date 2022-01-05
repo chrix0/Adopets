@@ -1,21 +1,21 @@
 package com.rain.adopets
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.core.app.ShareCompat
+import kotlinx.android.synthetic.main.fragment_profile__main_.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Profile_Main_Frag.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class Profile_Main_Frag : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -33,27 +33,68 @@ class Profile_Main_Frag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val v : View = inflater.inflate(R.layout.fragment_profile__main_, container, false)
         // Inflate the layout for this fragment
-        
-        return inflater.inflate(R.layout.fragment_profile__main_, container, false)
+        return main(v)
+    }
+
+    fun main(v : View) : View{
+        var user = singletonData.accList[singletonData.currentAccId]
+        var fullName = v.findViewById<TextView>(R.id.fullName)
+        fullName.text = user.fullName
+
+        var email = v.findViewById<TextView>(R.id.email)
+        email.text = user.email
+
+        var personaldata = v.findViewById<Button>(R.id.PersonalData)
+        personaldata.setOnClickListener{
+            var intent = Intent(requireContext(),Personaldata::class.java)
+            startActivity(intent)
+        }
+        //var Adoptionhistory = v.findViewById<Button>(R.id.Adoptionhistory)
+        //Adoptionhistory.setOnClickListener{
+           // var intent = Intent(requireContext(),Adoptionhistory::class.java)
+            //startActivity(intent)
+       // }
+
+        //var breedHistory = v.findViewById<Button>(R.id.breedHistory)
+        //breedHistory.setOnClickListener{
+           // var intent = Intent(requireContext(),breedHistory::class.java)
+            //startActivity(intent)
+        //}
+
+        //var purchaseHistory = v.findViewById<Button>(R.id.purchaseHistory)
+        //purchaseHistory.setOnClickListener{
+            //var intent = Intent(requireContext(),purchaseHistory::class.java)
+            //startActivity(intent)
+        //}
+
+        var share = v.findViewById<Button>(R.id.share)
+        share.setOnClickListener{
+            val mimeType = "text/plain"
+            ShareCompat.IntentBuilder
+                .from(this.requireActivity())
+                .setType(mimeType)
+                .setChooserTitle("Share this app to your friends!")
+                .setText("Find your furever best friend with Adopets!")
+                .startChooser()
+        }
+
+        var logout = v.findViewById<Button>(R.id.logout)
+        logout.setOnClickListener{
+            var intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+        return v
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Profile_Main_Frag.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance( param1: String, param2: String ) =
+        fun newInstance(param1: String, param2: String) =
             Profile_Main_Frag().apply {
                 arguments = Bundle().apply {
-                    putString ( ARG_PARAM1, param1 )
-                    putString ( ARG_PARAM2, param2 )
+                    putString (ARG_PARAM1, param1)
+                    putString (ARG_PARAM2, param2)
                 }
             }
     }

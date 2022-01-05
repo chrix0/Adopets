@@ -19,7 +19,7 @@ object singletonData {
             "Test Account",
             "testaccount@gmail.com",
             mutableListOf(),
-            mutableListOf(),
+            mutableListOf("","","",""),
             "",
             mutableListOf()
         )
@@ -313,16 +313,7 @@ object singletonData {
     //Outfit Analyzer (Untuk memudahkan resetting aja)
     lateinit var OASession : classOASession
     var allImageProcessed = false
-    var breedHistory : MutableList<classBreedHistory> = mutableListOf(
-        classBreedHistory(
-            1,
-            "Stray Cat",
-            "Male",
-            "Medan, Indonesia",
-            "None",
-            "None",
-            "https://www.kucinglucu.net/wp-content/uploads/2018/05/kucing-ngeselin07.jpg"
-    ))
+
     // Adopt
     var adoptHistory : MutableList<classAdoptHistory> = mutableListOf(classAdoptHistory(
         1,
@@ -334,7 +325,6 @@ object singletonData {
     )
 
     lateinit var curAdopting : classAdopt
-    lateinit var curBreeding : classBreed
 
 
     var adoptList : MutableList<classAdopt> = mutableListOf(
