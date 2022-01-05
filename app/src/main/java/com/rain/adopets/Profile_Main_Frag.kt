@@ -93,8 +93,8 @@ class Profile_Main_Frag : Fragment() {
         fun newInstance(param1: String, param2: String) =
             Profile_Main_Frag().apply {
                 arguments = Bundle().apply {
-                    putString (ARG_PARAM1, param1)
-                    putString (ARG_PARAM2, param2)
+                    putString(ARG_PARAM1,param1)
+                    putString(ARG_PARAM2,param2)
                 }
             }
     }
