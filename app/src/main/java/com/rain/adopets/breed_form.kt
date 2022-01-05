@@ -16,6 +16,7 @@ class breed_form : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
     }
     private fun check() : Boolean{
         var done : Boolean = true
