@@ -37,6 +37,7 @@ class breed_info : AppCompatActivity() {
 
         apply.setOnClickListener(){
             var intent = Intent(this, breed_form::class.java)
+            singletonData.curBreeding = data
             startActivity(intent)
         }
     }

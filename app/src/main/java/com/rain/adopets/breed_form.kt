@@ -10,12 +10,16 @@ class breed_form : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_breed_form)
+        val actionbar = supportActionBar
+        actionbar!!.title = "Form"
+        actionbar.setDisplayHomeAsUpEnabled(true)
         submit.setOnClickListener(){
             if(check()){
                 var intent = Intent(this, breed_track::class.java)
                 startActivity(intent)
             }
         }
+
     }
     private fun check() : Boolean{
         var done : Boolean = true
@@ -69,5 +73,9 @@ class breed_form : AppCompatActivity() {
         }
 
         return done
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

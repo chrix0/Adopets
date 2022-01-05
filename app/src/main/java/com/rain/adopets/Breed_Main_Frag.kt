@@ -12,6 +12,7 @@ import android.widget.ImageButton
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_breed__main_.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -87,6 +88,11 @@ class Breed_Main_Frag : Fragment() {
         recycleViewUpdate(view,data)
         search(view, data)
         filterAtoZ(view, data)
+        var history = view.findViewById<FloatingActionButton>(R.id.history)
+        history.setOnClickListener(){
+            var intent = Intent(requireContext(), breed_history::class.java)
+            startActivity(intent)
+        }
         return view
     }
     private fun recycleViewUpdate(view : View, data : MutableList<classBreed>){
