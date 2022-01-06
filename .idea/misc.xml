@@ -31,14 +31,13 @@
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1796875" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/menu/productlist_sort.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroPractice/Adopets/app/src/main/res/xml/root_preferences.xml" value="0.14666666666666667" />
-        <entry key="..\:/Android Project/Adopets/Adopets/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable-anydpi/ic_placehold.xml" value="0.12222222222222222" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable/adopt_date.xml" value="0.2546875" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable/adopt_done.xml" value="0.2546875" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable/adopt_status.xml" value="0.2546875" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/drawable/shape_circle.xml" value="0.2703125" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/font/.xml" value="0.284375" />
-        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_form.xml" value="0.176" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_form.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_history.xml" value="0.1" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_info.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_adopt_track.xml" value="0.264" />
@@ -55,14 +54,14 @@
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_shop_checkout.xml" value="0.25416666666666665" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_shop_product_list.xml" value="0.536" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_info.xml" value="0.1" />
-        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_more.xml" value="0.36973180076628354" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_more.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/activity_wiki_species.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/dialog_shop_history_details.xml" value="0.14427083333333332" />
-        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.1" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_adopt__main_.xml" value="0.2" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_breed__main_.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_profile__main_.xml" value="0.4" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_shop__main_.xml" value="0.264" />
-        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.1" />
+        <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/fragment_wiki__main_.xml" value="0.264" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/recycler_adopt.xml" value="0.536" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/recycler_adopt_history.xml" value="0.1543859649122807" />
         <entry key="..\:/Mikroskil/Semester 5/Prog Mobile/proj/app/src/main/res/layout/recycler_basket.xml" value="0.17604166666666668" />
@@ -98,8 +97,6 @@
         <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.21" />
         <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_recommend.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/drmun/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_adopt_history.xml" value="0.33" />
-        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_breed_history.xml" value="0.19375" />
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_login.xml" value="0.28940217391304346" />
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/activity_oa_outfit_pic.xml" value="0.1921875" />
@@ -116,8 +113,6 @@
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_breed__main_.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_profile__main_.xml" value="0.33" />
         <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/fragment_shop__main_.xml" value="0.25" />
-        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/layout/recycler_breed_history.xml" value="0.20260416666666667" />
-        <entry key="..\:/Users/praaannnn/AndroidStudioProjects/Adopets/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20260416666666667" />
       </map>
     </option>
   </component>

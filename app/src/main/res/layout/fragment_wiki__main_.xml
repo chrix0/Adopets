@@ -61,7 +61,7 @@
                     android:id="@+id/title_tips"
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
-                    android:text="Tips and Trick"
+                    android:text="Tips and Tricks"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
 

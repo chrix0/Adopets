@@ -147,6 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="How many pets do you own?"
+                    android:inputType="number"
                     android:textAlignment="center"
                     />
             </LinearLayout>
@@ -206,7 +207,7 @@
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Im sure that what i have filled in the form is correct"/>
+                    android:text="I'm sure that what i have filled in the form is correct"/>
             </LinearLayout>
             <Button
                 android:id="@+id/submit"

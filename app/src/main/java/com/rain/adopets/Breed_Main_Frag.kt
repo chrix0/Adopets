@@ -54,7 +54,7 @@ class Breed_Main_Frag : Fragment() {
         }
         else{
             for(i : classBreed in data){
-                if(i.nama.lowercase().contains(text)){
+                if(i.tipe.lowercase().contains(text)){
                     newList.add(i)
                 }
             }
@@ -74,20 +74,20 @@ class Breed_Main_Frag : Fragment() {
             return@setOnEditorActionListener true
         }
     }
-    private fun filterAtoZ(view : View, list : MutableList<classBreed>){
+    /*private fun filterAtoZ(view : View, list : MutableList<classBreed>){
         var filter = view.findViewById<ImageButton>(R.id.button_filter)
         filter.setOnClickListener() {
             list.sortBy { it.nama }
             list.reverse()
             recycleViewUpdate(view,list)
         }
-    }
+    }*/
 
     private fun run(view:View) : View{
         var data : MutableList<classBreed> = singletonData.breedList
         recycleViewUpdate(view,data)
         search(view, data)
-        filterAtoZ(view, data)
+        //filterAtoZ(view, data)
         var history = view.findViewById<FloatingActionButton>(R.id.history)
         history.setOnClickListener(){
             var intent = Intent(requireContext(), breed_history::class.java)
