@@ -56,7 +56,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/speciesInformation"
                 android:padding="20dp">
-
                 <TextView
                     android:id="@+id/title_tips"
                     android:layout_width="233dp"
@@ -64,14 +63,12 @@
                     android:text="Tips and Tricks"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold" />
-
                 <Button
                     android:id="@+id/moreTips"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_toRightOf="@id/title_tips"
                     android:text="More items" />
-
                 <ScrollView
                     android:id="@+id/scrollTips"
                     android:layout_width="match_parent"
@@ -83,12 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </ScrollView>
-
             </RelativeLayout>
-
-
-
-
         </RelativeLayout>
     </ScrollView>
 
