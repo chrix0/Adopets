@@ -46,28 +46,27 @@ class Profile_Main_Frag : Fragment() {
         var email = v.findViewById<TextView>(R.id.email)
         email.text = user.email
 
-        var personaldata = v.findViewById<Button>(R.id.PersonalData)
+        var personaldata = v.findViewById<Button>(R.id.personalData)
         personaldata.setOnClickListener{
             var intent = Intent(requireContext(),Personaldata::class.java)
             startActivity(intent)
         }
-        //var Adoptionhistory = v.findViewById<Button>(R.id.Adoptionhistory)
-        //Adoptionhistory.setOnClickListener{
-           // var intent = Intent(requireContext(),Adoptionhistory::class.java)
-            //startActivity(intent)
-       // }
+        var Adoptionhistory = v.findViewById<Button>(R.id.Adoptionhistory)
+        Adoptionhistory.setOnClickListener{
+           var intent = Intent(requireContext(),adopt_history::class.java)
+            startActivity(intent) }
 
-        //var breedHistory = v.findViewById<Button>(R.id.breedHistory)
-        //breedHistory.setOnClickListener{
-           // var intent = Intent(requireContext(),breedHistory::class.java)
-            //startActivity(intent)
-        //}
+        var breedHistory = v.findViewById<Button>(R.id.bredHistory)
+        breedHistory.setOnClickListener{
+            var intent = Intent(requireContext(),breed_history::class.java)
+            startActivity(intent)
+        }
 
-        //var purchaseHistory = v.findViewById<Button>(R.id.purchaseHistory)
-        //purchaseHistory.setOnClickListener{
-            //var intent = Intent(requireContext(),purchaseHistory::class.java)
-            //startActivity(intent)
-        //}
+        var purchaseHistory = v.findViewById<Button>(R.id.purchaseHistory)
+        purchaseHistory.setOnClickListener{
+            var intent = Intent(requireContext(),shop_tracker::class.java)
+            startActivity(intent)
+        }
 
         var share = v.findViewById<Button>(R.id.share)
         share.setOnClickListener{
