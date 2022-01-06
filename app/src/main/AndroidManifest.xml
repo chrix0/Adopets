@@ -18,10 +18,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
+        android:screenOrientation="sensorPortrait"
         android:theme="@style/Theme.Adopets">
         <activity
             android:name=".breed_history"
@@ -37,8 +38,14 @@
             android:exported="true" />
         <activity
             android:name=".splash_screen"
-            android:exported="false"
-            android:theme="@style/Theme.Adopets.NoActionBar" />
+            android:exported="true"
+            android:theme="@style/Theme.Adopets.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".breed_track"
             android:exported="true" />
@@ -59,13 +66,14 @@
             android:exported="true" />
         <activity
             android:name=".register"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Adopets.NoActionBar"/>
         <activity
             android:name=".oa_recommend"
             android:exported="false" />
         <activity
             android:name=".OA_result"
-            android:exported="false" /> <!-- Copy activity login di sini -->
+            android:exported="false" />
         <activity
             android:name=".OA_outfitPic"
             android:exported="false" />
@@ -80,12 +88,8 @@
             android:exported="true" /> <!-- Copy activity login di sini -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true"
+            android:theme="@style/Theme.Adopets.NoActionBar">
         </activity>
 
         <activity

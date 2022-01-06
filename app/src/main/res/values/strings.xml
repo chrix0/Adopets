@@ -190,6 +190,7 @@
     <!--Recommend-->
     <string name="recommendLoading">Processing. Do not worry. It will be faster next time.</string>
     <string name="recommedationTitle">Recommendation</string>
+    <string name="byRain">by Rain</string>
 
 
     <string-array name="spinner_petCategoryItem">
