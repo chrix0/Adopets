@@ -14,8 +14,8 @@ object singletonData {
     var accList : MutableList<classAccount> = mutableListOf(
         classAccount(
             0,
-            "TESTACCOUNT",
-            "TEST",
+            "a",
+            "a",
             "Test Account",
             "testaccount@gmail.com",
             mutableListOf(),

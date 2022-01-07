@@ -42,7 +42,8 @@ class shop_checkout : AppCompatActivity() {
         val promptPhone : String = getString(R.string.promptPhone)
 
         //address cara 1
-        if(user.shippingAddress.size == 0){
+        var address = user.shippingAddress
+        if(address[0].equals("") && address[1].equals("") && address[2].equals("") && address[3].equals("")){
             alamat.setText(promptAddress)
         }
         else{
