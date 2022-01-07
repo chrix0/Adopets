@@ -21,28 +21,17 @@
                 android:layout_weight="8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Search"
+                android:hint="Search Type / Category"
                 android:paddingLeft="10dp"
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 android:maxLines="1"
                 />
-            <ImageButton
-                android:id="@+id/button_filter"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@id/search"
-                android:background="@color/transparent"
-                android:padding="5dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/breed_filter" />
 
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/breedRecycleView"
-            android:layout_below="@id/button_filter"
+
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:src="@drawable/shop_transaction_history"
-        android:layout_margin="16dp" />
+        android:layout_margin="32dp" />
     <!-- TODO: Update blank fragment layout -->
 
 

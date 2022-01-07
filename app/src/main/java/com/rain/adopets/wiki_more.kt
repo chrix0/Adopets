@@ -33,7 +33,7 @@ class wiki_more : AppCompatActivity() {
         var dataAkhir = filter(dataAwal,tipe)
         recycleViewUpdate(dataAkhir)
         var dataAkhir2 = search(dataAkhir)
-        filterAtoZ(dataAkhir2)
+        //filterAtoZ(dataAkhir2)
 
 
     }
@@ -50,14 +50,14 @@ class wiki_more : AppCompatActivity() {
         }
         return newList
     }
-    private fun filterAtoZ(list : MutableList<classWiki>){
+    /*private fun filterAtoZ(list : MutableList<classWiki>){
         var filter = findViewById<ImageButton>(R.id.button_filter)
         filter.setOnClickListener() {
             list.sortBy { it.nama }
             list.reverse()
             recycleViewUpdate(list)
         }
-    }
+    }*/
     private fun filterNama(searchText : String, data : MutableList<classWiki>) : MutableList<classWiki>{
         var newList : MutableList<classWiki> = mutableListOf()
         var text = searchText.trim().lowercase()

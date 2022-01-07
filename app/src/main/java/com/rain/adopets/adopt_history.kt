@@ -10,7 +10,7 @@ class adopt_history : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_adopt_history)
         val actionbar = supportActionBar
-        actionbar!!.title = "History"
+        actionbar!!.title = "Adoption History"
         actionbar.setDisplayHomeAsUpEnabled(true)
         var data : MutableList<classAdoptHistory> = singletonData.adoptHistory
         var r = findViewById<RecyclerView>(R.id.recycleView)

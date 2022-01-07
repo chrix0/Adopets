@@ -45,8 +45,6 @@ class Adopt_Main_Frag : Fragment() {
         // Inflate the layout for this fragment
         val v : View = inflater.inflate(R.layout.fragment_adopt__main_, container, false)
         //Spinner Adapter for Pet Category
-
-
         return setSpinner(v)
     }
 
@@ -57,6 +55,7 @@ class Adopt_Main_Frag : Fragment() {
             R.array.spinner_petCategoryItem,
             android.R.layout.simple_spinner_dropdown_item
         )
+
         spinner.adapter = adapterAnimalCategory
         var data : MutableList<classAdopt> = singletonData.adoptList
         recycleViewUpdate(view,data)

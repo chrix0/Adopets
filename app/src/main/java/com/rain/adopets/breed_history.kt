@@ -10,7 +10,7 @@ class breed_history : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_breed_history)
         val actionbar = supportActionBar
-        actionbar!!.title = "History"
+        actionbar!!.title = "Breeding History"
         actionbar.setDisplayHomeAsUpEnabled(true)
         var data : MutableList<classBreedHistory> = singletonData.breedHistory
         var r = findViewById<RecyclerView>(R.id.recycleView)
