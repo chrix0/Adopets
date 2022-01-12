@@ -23,6 +23,7 @@ class recycler_breed_adapter(val context : Context, data : MutableList<classBree
         var breed = itemView.findViewById<Button>(R.id.apply)
         var petPrice = itemView.findViewById<TextView>(R.id.price)
         var health = itemView.findViewById<TextView>(R.id.health)
+        var type = itemView.findViewById<TextView>(R.id.type)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): recycler_breed_adapter.MyHolder {
         val inflate = LayoutInflater.from(parent.context)
@@ -32,6 +33,7 @@ class recycler_breed_adapter(val context : Context, data : MutableList<classBree
 
     override fun onBindViewHolder(holder: recycler_breed_adapter.MyHolder, position: Int) {
         Picasso.get().load(myData[position].pic).into(holder.petPhoto)
+        holder.type.setText(myData.get(position).tipe)
         holder.petName.setText(myData.get(position).nama)
         holder.petGender.setText(myData.get(position).jenKel)
         holder.petLocation.setText(myData.get(position).lokasi)
