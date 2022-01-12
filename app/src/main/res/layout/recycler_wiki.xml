@@ -33,7 +33,7 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Informasi, ciri khas, tingkah laku, perawatan."
+            android:text="General information about the topic and things related"
             android:textColor="#5D4037"
             android:textAlignment="center"
             android:textSize="10sp" />

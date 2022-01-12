@@ -38,6 +38,10 @@ class register : AppCompatActivity() {
             return false
         }
 
+        text.setOnClickListener{
+            finish()
+        }
+
         signup.setOnClickListener{
             cuserName = username.text.toString()
             cpassword = password.text.toString()

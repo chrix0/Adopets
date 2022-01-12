@@ -205,6 +205,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="20dp">
                 <CheckBox
+                    android:id="@+id/ready"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I'm sure that what i have filled in the form is correct"/>
