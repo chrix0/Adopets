@@ -20,7 +20,6 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:screenOrientation="sensorPortrait"
         android:theme="@style/Theme.Adopets">
@@ -85,7 +84,7 @@
             android:exported="true" />
         <activity
             android:name=".adopt_info"
-            android:exported="true" /> <!-- Copy activity login di sini -->
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
